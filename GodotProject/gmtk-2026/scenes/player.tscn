@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ck5lenyq7mwgt"]
+
+[ext_resource type="Script" uid="uid://qbhlghi2fadr" path="res://scripts/player.gd" id="1_3vyb7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
+
+[node name="Player" type="Node2D" unique_id=752231175]
+script = ExtResource("1_3vyb7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1031212439]
+sprite_frames = SubResource("SpriteFrames_dgbkm")
