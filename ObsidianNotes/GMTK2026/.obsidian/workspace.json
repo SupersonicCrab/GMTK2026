@@ -11,12 +11,14 @@
             "id": "128c9a168ace8e0f",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Whiteboard.excalidraw.md"
+                "file": "Rina Todo.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "Whiteboard.excalidraw"
+              "icon": "lucide-file",
+              "title": "Rina Todo"
             }
           }
         ]
@@ -184,11 +186,12 @@
   },
   "active": "128c9a168ace8e0f",
   "lastOpenFiles": [
+    "Whiteboard.excalidraw.md",
+    "Rina Todo.md",
     "Pasted Image 20260722143357_442.png",
     "Pasted Image 20260722143357_437.png",
     "Pasted Image 20260722143357_431.png",
     "Pasted Image 20260722143357_416.png",
-    "Whiteboard.excalidraw.md",
     "Welcome.md"
   ]
 }

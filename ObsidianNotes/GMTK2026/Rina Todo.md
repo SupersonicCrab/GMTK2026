@@ -1,0 +1,12 @@
+- [ ] Moodboard
+- [ ] Main character sprites
+	- [ ] idle
+	- [ ] walking
+- [ ] Enemy sprites
+	- [ ] idle
+	- [ ] walking
+- [ ] Environment tilesheet
+- [ ] Item sprites
+	- [ ] wick
+- [ ] Design UI
+- [ ] UI tilesheet
