@@ -17,11 +17,10 @@ animations = [{
 size = Vector2(64, 64)
 
 [node name="DestructableWall" type="Area2D" unique_id=820501119]
+collision_layer = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1315733269]
-position = Vector2(32, 32)
 sprite_frames = SubResource("SpriteFrames_dgbkm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1048877618]
-position = Vector2(32, 32)
 shape = SubResource("RectangleShape2D_dgbkm")
