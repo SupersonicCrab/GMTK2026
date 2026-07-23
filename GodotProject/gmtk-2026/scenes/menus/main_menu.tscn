@@ -9,29 +9,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_xqga4")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1507284707]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -278.0
-offset_top = -143.0
-offset_right = 308.0
-offset_bottom = 239.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=63183038]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 241.0
+offset_right = 820.0
+offset_bottom = 272.0
 
-[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1604792684]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1507284707]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1604792684]
 layout_mode = 2
 text = "Play da game"
 
-[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1489669171]
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1489669171]
 layout_mode = 2
 text = "Close da game"
 
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -1,10 +1,15 @@
 extends Node2D
 
+signal OnPlayerExploded
+signal OnPlayerStepTaken
+
 func Explode():
-	LevelManager.OnPlayerExploded()
+	OnPlayerExploded.emit()
 
 func Move(xydirection):
-	LevelManager.OnPlayerStepTaken()
+	get_viewport().set_input_as_handled()
+	OnPlayerStepTaken.emit()
+	
 
 func _input(event):
 	#if event.is_action_released("Explode"):
@@ -17,4 +22,3 @@ func _input(event):
 		Move(Vector2(0, -1))
 	elif event.is_action_released("MoveUp"):
 		Move(Vector2(0, 1))
-	get_viewport().set_input_as_handled()
