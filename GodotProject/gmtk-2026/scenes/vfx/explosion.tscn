@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bfedl0lmrynim"]
+
+[ext_resource type="Texture2D" uid="uid://drly1avno1gn" path="res://assets/debugboom.png" id="1_rckmw"]
+[ext_resource type="Script" uid="uid://eqyx32a6qjbe" path="res://scripts/explosion.gd" id="2_2au8o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rckmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_rckmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_rckmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_rckmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_rckmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_rckmw")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Explosion" type="Node2D" unique_id=951451427]
+script = ExtResource("2_2au8o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1289101180]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_dgbkm")
+autoplay = "default"
+frame = 5
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

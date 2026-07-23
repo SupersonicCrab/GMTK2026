@@ -3,6 +3,7 @@ extends Node2D
 signal OnPlayerExploded
 signal OnPlayerStepTaken
 
+var ExplosionScene = preload("res://scenes/vfx/explosion.tscn")
 var InitialPosition
 
 func _ready() -> void:
@@ -14,7 +15,9 @@ func Explode():
 	var OverlappingDestructables = ExplosionArea.get_overlapping_areas()
 	for Destructable : Area2D in OverlappingDestructables:
 		Destructable.queue_free()
-	
+	var ExplosionInstance : Node2D = ExplosionScene.instantiate()
+	get_tree().root.add_child(ExplosionInstance)
+	ExplosionInstance.global_position = position
 	position = InitialPosition
 	OnPlayerExploded.emit()
 
