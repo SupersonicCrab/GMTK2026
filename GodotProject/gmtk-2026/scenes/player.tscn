@@ -17,6 +17,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgbkm"]
 size = Vector2(64, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngtbk"]
+size = Vector2(128, 128)
+
 [node name="Player" type="Area2D" unique_id=851030699]
 script = ExtResource("1_3vyb7")
 
@@ -24,7 +27,7 @@ script = ExtResource("1_3vyb7")
 position = Vector2(32, 32)
 sprite_frames = SubResource("SpriteFrames_dgbkm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2122179550]
+[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=2122179550]
 position = Vector2(32, 32)
 shape = SubResource("RectangleShape2D_dgbkm")
 
@@ -32,3 +35,11 @@ shape = SubResource("RectangleShape2D_dgbkm")
 position = Vector2(32, 32)
 target_position = Vector2(0, 64)
 collide_with_areas = true
+
+[node name="ExplosionArea" type="Area2D" parent="." unique_id=1546628619]
+collision_layer = 0
+collision_mask = 2
+
+[node name="ExplosionCollision" type="CollisionShape2D" parent="ExplosionArea" unique_id=168450580]
+position = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_ngtbk")

@@ -8,7 +8,13 @@ var InitialPosition
 func _ready() -> void:
 	InitialPosition = position
 
+@onready var ExplosionArea = $ExplosionArea
+
 func Explode():
+	var OverlappingDestructables = ExplosionArea.get_overlapping_areas()
+	for Destructable : Area2D in OverlappingDestructables:
+		Destructable.queue_free()
+	
 	position = InitialPosition
 	OnPlayerExploded.emit()
 
@@ -23,10 +29,7 @@ func Move(xydirection):
 		position += xydirection * Constants.TileSize
 		OnPlayerStepTaken.emit()
 	
-
 func _input(event):
-	#if event.is_action_released("Explode"):
-	#	Explode()
 	if event.is_action_released("MoveLeft"):
 		Move(Vector2(-1 ,0))
 	elif event.is_action_released("MoveRight"):
