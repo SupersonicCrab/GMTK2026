@@ -2,11 +2,45 @@
 - [ ] Main character sprites
 	- [ ] idle
 	- [ ] walking
+	- [ ] imminent detonation (panik)
+	- [ ] detonate (boom)
 - [ ] Enemy sprites
 	- [ ] idle
 	- [ ] walking
+	- [ ] emote
 - [ ] Environment tilesheet
+	- [ ] destructible walls
+	- [ ] static walls
+	- [ ] lava walls
+	- [ ] broken walls
+	- [ ] lava source
+	- [ ] lava flow
+	- [ ] fog of war
+	- [ ] undiscovered walls
+	- [ ] floor
 - [ ] Item sprites
 	- [ ] wick
-- [ ] Design UI
-- [ ] UI tilesheet
+	- [ ] scissors (level end?)
+	- [ ] stairs(?)
+	- [ ] boulders
+		- [ ] idle
+		- [ ] moving
+- [ ]  UI/UX
+	- [ ] buttons
+	- [ ] text boxes
+	- [ ] text
+		- [ ] instructions
+		- [ ] story
+	- [ ] timer/clock
+		- [ ] total lives remaining
+		- [ ] steps remaining
+	- [ ] win/lose screen
+	- [ ] options menu
+	- [ ] main menu
+- [ ] itch assets
+	- [ ] banner
+	- [ ] capsule
+	- [ ] background
+	- [ ] text
+		- [ ] short description
+		- [ ] instructions/controls

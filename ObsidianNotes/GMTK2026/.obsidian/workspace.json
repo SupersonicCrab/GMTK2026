@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "11145bf90ebcdee4",
+        "id": "e253039300f494ba",
         "type": "tabs",
         "children": [
           {
-            "id": "8a43a82c0d6ae5d5",
+            "id": "9e90dcb5246785f2",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Whiteboard.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Whiteboard.excalidraw"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -182,10 +180,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "8a43a82c0d6ae5d5",
+  "active": "9e90dcb5246785f2",
   "lastOpenFiles": [
-    "Excalidraw/Whiteboard.excalidraw.md",
     "Asset Todo.md",
+    "Excalidraw/Whiteboard.excalidraw.md",
     "Excalidraw/Assets/Pasted Image 20260722161127_098.png",
     "Excalidraw/Assets",
     "Excalidraw/Untitled.md",
