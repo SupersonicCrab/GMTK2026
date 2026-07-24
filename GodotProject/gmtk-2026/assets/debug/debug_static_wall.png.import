@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3xeq310dl40k"
-path="res://.godot/imported/FireSprite.png-0d660bd43ebf75722c907533e986ab30.ctex"
+uid="uid://dv4ay11tp8ypm"
+path="res://.godot/imported/debug_static_wall.png-3ccfa29b2dd9c50ce60fae97f9fd3cd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FireSprite.png"
-dest_files=["res://.godot/imported/FireSprite.png-0d660bd43ebf75722c907533e986ab30.ctex"]
+source_file="res://assets/debug/debug_static_wall.png"
+dest_files=["res://.godot/imported/debug_static_wall.png-3ccfa29b2dd9c50ce60fae97f9fd3cd9.ctex"]
 
 [params]
 

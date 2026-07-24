@@ -1,2 +1,3 @@
-Collision mask 2 is destructible objects
-Collision mask 3 is pickup objects
+- Collision mask 2 is destructible objects
+- Collision mask 3 is pickup objects
+- DefaultSteps should be a multiple of 4 to make the animated timer look pretty

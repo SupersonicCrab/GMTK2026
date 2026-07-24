@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfedl0lmrynim"]
 
-[ext_resource type="Texture2D" uid="uid://drly1avno1gn" path="res://assets/debugboom.png" id="1_rckmw"]
+[ext_resource type="Texture2D" uid="uid://drly1avno1gn" path="res://assets/debug/debug_boom.png" id="1_rckmw"]
 [ext_resource type="Script" uid="uid://eqyx32a6qjbe" path="res://scripts/explosion.gd" id="2_2au8o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]

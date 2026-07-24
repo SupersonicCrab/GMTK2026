@@ -1,20 +1,20 @@
 [gd_scene format=4 uid="uid://tq1c7l0cxf6p"]
 
-[ext_resource type="PackedScene" uid="uid://cif5xhi77ln4u" path="res://scenes/level_manager.tscn" id="1_b4vpe"]
-[ext_resource type="PackedScene" uid="uid://cjsj7aduji3mm" path="res://scenes/objects/destructible_wall.tscn" id="2_2urex"]
-[ext_resource type="PackedScene" uid="uid://ck5lenyq7mwgt" path="res://scenes/player.tscn" id="2_4q1i7"]
-[ext_resource type="Texture2D" uid="uid://dv4ay11tp8ypm" path="res://assets/debugstaticwall.png" id="3_2urex"]
-[ext_resource type="PackedScene" uid="uid://buqf60l6p7f7c" path="res://scenes/objects/scissors.tscn" id="5_qwyq3"]
+[ext_resource type="PackedScene" uid="uid://cif5xhi77ln4u" path="res://scenes/level_manager.tscn" id="1_c2bev"]
+[ext_resource type="PackedScene" uid="uid://ck5lenyq7mwgt" path="res://scenes/player.tscn" id="2_k88ha"]
+[ext_resource type="PackedScene" uid="uid://cjsj7aduji3mm" path="res://scenes/objects/destructible_wall.tscn" id="3_nkmkj"]
+[ext_resource type="Texture2D" uid="uid://dv4ay11tp8ypm" path="res://assets/debug/debug_static_wall.png" id="4_fl5jg"]
+[ext_resource type="PackedScene" uid="uid://buqf60l6p7f7c" path="res://scenes/objects/scissors.tscn" id="5_x3x2x"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4q1i7"]
-scenes/1/scene = ExtResource("2_2urex")
+scenes/1/scene = ExtResource("3_nkmkj")
 
 [sub_resource type="TileSet" id="TileSet_yf5fn"]
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetScenesCollectionSource_4q1i7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q1i7"]
-texture = ExtResource("3_2urex")
+texture = ExtResource("4_fl5jg")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
@@ -24,11 +24,11 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4q1i7")
 
-[node name="TestLevel" type="Node2D" unique_id=1377552078]
+[node name="LevelPrefab" type="Node2D" unique_id=1377552078]
 
-[node name="LevelManager" parent="." unique_id=776668038 instance=ExtResource("1_b4vpe")]
+[node name="LevelManager" parent="." unique_id=776668038 instance=ExtResource("1_c2bev")]
 
-[node name="Player" parent="LevelManager" unique_id=851030699 instance=ExtResource("2_4q1i7")]
+[node name="Player" parent="LevelManager" unique_id=851030699 instance=ExtResource("2_k88ha")]
 position = Vector2(64, 64)
 
 [node name="ScenesTileMap" type="TileMapLayer" parent="." unique_id=1052665844]
@@ -39,7 +39,7 @@ tile_set = SubResource("TileSet_yf5fn")
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAcAAAAAAAAAAAAPAAgAAAAAAAAAAAAPAAkAAAAAAAAAAAAPAAoAAAAAAAAAAAAPAAsAAAAAAAAAAAAPAAwAAAAAAAAAAAAOAAwAAAAAAAAAAAANAAwAAAAAAAAAAAAMAAwAAAAAAAAAAAALAAwAAAAAAAAAAAAKAAwAAAAAAAAAAAAJAAwAAAAAAAAAAAAIAAwAAAAAAAAAAAAHAAwAAAAAAAAAAAAGAAwAAAAAAAAAAAAFAAwAAAAAAAAAAAAEAAwAAAAAAAAAAAADAAwAAAAAAAAAAAACAAwAAAAAAAAAAAABAAwAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_57qmd")
 
-[node name="Scissors" parent="." unique_id=1086519541 instance=ExtResource("5_qwyq3")]
+[node name="Scissors" parent="." unique_id=1086519541 instance=ExtResource("5_x3x2x")]
 position = Vector2(192, 448)
 
 [connection signal="OnPlayerExploded" from="LevelManager/Player" to="LevelManager" method="OnPlayerExploded"]

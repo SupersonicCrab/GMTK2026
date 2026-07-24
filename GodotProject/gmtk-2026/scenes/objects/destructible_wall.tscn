@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjsj7aduji3mm"]
 
-[ext_resource type="Texture2D" uid="uid://byxxisgkfd41q" path="res://assets/debugwalltile.png" id="1_70l8e"]
+[ext_resource type="Texture2D" uid="uid://byxxisgkfd41q" path="res://assets/debug/debug_wall_tile.png" id="1_70l8e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
 animations = [{

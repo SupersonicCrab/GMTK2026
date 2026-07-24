@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byxxisgkfd41q"
-path="res://.godot/imported/debugwalltile.png-37988414828d30cd913d94054330bb08.ctex"
+uid="uid://drrw1yddb6e32"
+path="res://.godot/imported/environment_tileset.png-010bd776f39b079d2a4fe6e711546c09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/debugwalltile.png"
-dest_files=["res://.godot/imported/debugwalltile.png-37988414828d30cd913d94054330bb08.ctex"]
+source_file="res://assets/environment_tileset.png"
+dest_files=["res://.godot/imported/environment_tileset.png-010bd776f39b079d2a4fe6e711546c09.ctex"]
 
 [params]
 
