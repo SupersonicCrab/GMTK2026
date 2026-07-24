@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 signal OnPlayerExploded
 signal OnPlayerStepTaken
@@ -23,21 +23,29 @@ func Explode():
 
 @onready var Raycast = $RayCast2D
 
+var CurrentlyMoving = false
+
 func Move(xydirection):
 	get_viewport().set_input_as_handled()
 	
-	Raycast.target_position = xydirection * Constants.TileSize
-	Raycast.force_raycast_update()
-	if !Raycast.is_colliding():
-		position += xydirection * Constants.TileSize
-		OnPlayerStepTaken.emit()
+	if !CurrentlyMoving:
+		Raycast.target_position = xydirection * Constants.TileSize
+		Raycast.force_raycast_update()
+		if !Raycast.is_colliding():
+			CurrentlyMoving = true
+			var tween = create_tween()
+			tween.tween_property(self, "position",
+				position + xydirection * Constants.TileSize, 1.0/4).set_trans(Tween.TRANS_SINE)
+			await tween.finished
+			OnPlayerStepTaken.emit()
+			CurrentlyMoving = false
 	
 func _input(event):
-	if event.is_action_released("MoveLeft"):
+	if event.is_action_pressed("MoveLeft"):
 		Move(Vector2(-1 ,0))
-	elif event.is_action_released("MoveRight"):
+	elif event.is_action_pressed("MoveRight"):
 		Move(Vector2(1, 0))
-	elif event.is_action_released("MoveDown"):
+	elif event.is_action_pressed("MoveDown"):
 		Move(Vector2(0, 1))
-	elif event.is_action_released("MoveUp"):
+	elif event.is_action_pressed("MoveUp"):
 		Move(Vector2(0, -1))

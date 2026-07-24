@@ -25,6 +25,6 @@ func OnPlayerExploded():
 	StepsRemaining = DefaultSteps
 	
 func GameOver():
-	print("GameOver")
+	print("Level Failed")
 	print("Total steps taken " + str(TotalStepsTaken))
-	get_tree().change_scene_to_file("res://scenes/menus/main_menu.tscn")
+	get_tree().reload_current_scene()

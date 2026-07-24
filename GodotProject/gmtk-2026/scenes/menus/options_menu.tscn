@@ -1,9 +1,42 @@
 [gd_scene format=3 uid="uid://bfyu8ndhclu78"]
 
-[node name="OptionsMenu" type="Control" unique_id=224853553]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[ext_resource type="Script" uid="uid://csqfgab07xouf" path="res://scripts/options_menu.gd" id="1_60mby"]
+[ext_resource type="PackedScene" uid="uid://bltmhwqlba5f7" path="res://scenes/menus/volume_slider.tscn" id="1_bp0ux"]
+
+[node name="OptionsMenu" type="MarginContainer" unique_id=1981868547]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -92.0
+offset_right = 48.5
+offset_bottom = 92.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_60mby")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=95576346]
+layout_mode = 2
+
+[node name="MasterVolume" parent="VBoxContainer" unique_id=385576037 instance=ExtResource("1_bp0ux")]
+layout_mode = 2
+
+[node name="SFXSlider" parent="VBoxContainer" unique_id=1265448786 instance=ExtResource("1_bp0ux")]
+layout_mode = 2
+AudioBusIndex = 1
+
+[node name="MusicSlider" parent="VBoxContainer" unique_id=672055023 instance=ExtResource("1_bp0ux")]
+layout_mode = 2
+AudioBusIndex = 2
+
+[node name="AmbienceSlider" parent="VBoxContainer" unique_id=1369428396 instance=ExtResource("1_bp0ux")]
+layout_mode = 2
+AudioBusIndex = 3
+
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1918307588]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

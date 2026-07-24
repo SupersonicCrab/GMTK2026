@@ -1,0 +1,20 @@
+- [x] Player
+	- [x] Movement
+		- [ ] Stretch goal: Hold down key to move continuously 
+	- [x] Exploding
+		- [x] Explosion vfx
+		- [x] Position resetting
+	- [ ] Stretch goal: Fog of war (map revealed permanently as player explores, map starts out occluded by fog asset)
+- [ ] Fire sprite
+	- [ ] Pathfinding
+	- [ ] Player collision/explosion
+- [ ] Pickups
+	- [x] Scissors (win condition)
+	- [ ] Wick (improves defaultsteps by x)
+- [ ] Obstacles
+	- [x] Static walls
+	- [x] Destructible walls
+	- [ ] Lava
+		- [ ] Source block
+		- [ ] Falling lava
+	- [ ] Boulder (player can push but not pull)

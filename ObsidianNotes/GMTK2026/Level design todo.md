@@ -1,0 +1,11 @@
+- [ ] Tutorial levels
+	- [ ] Destructible walls + wick
+	- [ ] Boulder
+	- [ ] Lava
+	- [ ] Fire sprite
+- [ ] Main levels
+	- [ ] 1
+	- [ ] 2?
+	- [ ] 3?
+	- [ ] 4?
+	- [ ] 5?

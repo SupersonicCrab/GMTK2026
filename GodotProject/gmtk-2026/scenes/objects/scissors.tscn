@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://buqf60l6p7f7c"]
+
+[ext_resource type="PackedScene" uid="uid://e8ibx60gxorf" path="res://scenes/objects/pickup.tscn" id="1_eribb"]
+[ext_resource type="Script" uid="uid://bx7adk1wiqtf7" path="res://scripts/scissors.gd" id="2_7l6s0"]
+
+[node name="Scissors" unique_id=1086519541 instance=ExtResource("1_eribb")]
+script = ExtResource("2_7l6s0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
