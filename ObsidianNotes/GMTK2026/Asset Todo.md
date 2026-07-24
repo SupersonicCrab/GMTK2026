@@ -1,42 +1,41 @@
-- [ ] Moodboard
+- [ ] ~~Moodboard~~
 - [ ] Main character sprites
 	- [ ] idle
-	- [ ] walking
-	- [ ] imminent detonation (panik)
+	- [ ] walking (stretch)
+	- [ ] imminent detonation (stretch)
 	- [ ] detonate (boom)
 - [ ] Enemy sprites
 	- [ ] idle
-	- [ ] walking
-	- [ ] emote
+	- [ ] walking/flying (stretch)
+	- [ ] emote (stretch)
 - [ ] Environment tilesheet
-	- [ ] destructible walls
-	- [ ] static walls
-	- [ ] lava walls
-	- [ ] broken walls
-	- [ ] lava source
-	- [ ] lava flow
-	- [ ] fog of war
-	- [ ] undiscovered walls
-	- [ ] floor
+	- [x] destructible walls
+	- [x] static walls
+	- [x] lava walls
+	- [x] broken walls
+	- [x] lava source
+	- [x] lava flow
+	- [ ] fog of war (stretch goal - if pros can do)
+	- [x] undiscovered walls
+	- [x] floor
 - [ ] Item sprites
-	- [ ] wick
-	- [ ] scissors (level end?)
-	- [ ] stairs(?)
+	- [ ] wick item
+	- [ ] scissors (level end)
+		- [ ] stairs
 	- [ ] boulders
-		- [ ] idle
-		- [ ] moving
 - [ ]  UI/UX
-	- [ ] buttons
-	- [ ] text boxes
+	- [ ] buttons (stretch)
+	- [x] text boxes 
 	- [ ] text
 		- [ ] instructions
 		- [ ] story
-	- [ ] timer/clock
-		- [ ] total lives remaining
-		- [ ] steps remaining
-	- [ ] win/lose screen
-	- [ ] options menu
-	- [ ] main menu
+			- [ ] could do an animatic instead (stretch)
+	- [x] timer/clock
+		- [x] total lives remaining
+		- [x] steps remaining
+	- [ ] win/lose screen 
+	- [ ] options menu (stretch)
+	- [ ] main menu (stretch-ish)
 - [ ] itch assets
 	- [ ] banner
 	- [ ] capsule

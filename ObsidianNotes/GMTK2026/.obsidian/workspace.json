@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "e253039300f494ba",
+        "id": "26a5e8890fb76ff4",
         "type": "tabs",
         "children": [
           {
-            "id": "0fbf9484af66492d",
+            "id": "c8fd136183401cbb",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Whiteboard.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Whiteboard.excalidraw"
-            }
-          },
-          {
-            "id": "9e752d3d56d76cb6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programmer Todo.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Programmer Todo"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,13 +180,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "9e752d3d56d76cb6",
+  "active": "c8fd136183401cbb",
   "lastOpenFiles": [
-    "Programmer Notes.md",
+    "Asset Todo.md",
     "Programmer Todo.md",
+    "Programmer Notes.md",
     "Level design todo.md",
     "Excalidraw/Whiteboard.excalidraw.md",
-    "Asset Todo.md",
     "Untitled",
     "Excalidraw/Assets/Pasted Image 20260722161127_098.png",
     "Excalidraw/Assets",
