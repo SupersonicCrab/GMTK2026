@@ -10,6 +10,7 @@ var InitialPosition
 func _ready() -> void:
 	InitialPosition = position
 
+@onready var DeathCollision = $DeathArea/DeathCollision
 @onready var ExplosionArea = $ExplosionArea
 
 func Explode():
@@ -25,6 +26,7 @@ func Explode():
 @onready var Raycast = $RayCast2D
 
 var CurrentlyMoving = false
+var MarkedForDeath = false
 
 func Move(xydirection):
 	get_viewport().set_input_as_handled()
@@ -40,6 +42,9 @@ func Move(xydirection):
 			await tween.finished
 			OnPlayerStepTaken.emit()
 			CurrentlyMoving = false
+		if MarkedForDeath:
+			MarkedForDeath = false
+			Explode()
 	
 func _input(event):
 	if event.is_action_pressed("MoveLeft"):
@@ -50,3 +55,6 @@ func _input(event):
 		Move(Vector2(0, 1))
 	elif event.is_action_pressed("MoveUp"):
 		Move(Vector2(0, -1))
+
+func _on_death_area_area_entered(area: Area2D) -> void:
+	MarkedForDeath = true

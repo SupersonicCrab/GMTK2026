@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://cjsj7aduji3mm"]
 
-[ext_resource type="Texture2D" uid="uid://byxxisgkfd41q" path="res://assets/debug/debug_wall_tile.png" id="1_70l8e"]
+[ext_resource type="Texture2D" uid="uid://drrw1yddb6e32" path="res://assets/environment_tileset.png" id="1_2r1me"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmkoj"]
+atlas = ExtResource("1_2r1me")
+region = Rect2(130, 130, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_70l8e")
+"texture": SubResource("AtlasTexture_cmkoj")
 }],
 "loop": 1,
 "name": &"default",

@@ -1,22 +1,30 @@
 extends Node2D
+class_name LevelManager
+
+signal StepUpdate
 
 @export var LivesRemaining = 5
 @export var DefaultSteps = 8
-@export var BoostedDefaultSteps = 16
-var TotalStepsTaken = 0
-var StepsRemaining = DefaultSteps
-
+@export var BoostedDefaultSteps = DefaultSteps * 2
 @export var PlayerNode : Player
 @export var StepTimerNode : StepTimer
 @export var NavigationRegion2DNode : NavigationRegion2D
+@export var WickNode : Wick
+
+var TotalStepsTaken = 0
+var StepsRemaining = DefaultSteps
 
 func _ready() -> void:
-	PlayerNode.OnPlayerStepTaken.connect(OnPlayerStepTaken)
-	PlayerNode.OnPlayerExploded.connect(OnPlayerExploded)
+	if PlayerNode:
+		PlayerNode.OnPlayerStepTaken.connect(OnPlayerStepTaken)
+		PlayerNode.OnPlayerExploded.connect(OnPlayerExploded)
+	if WickNode:
+		WickNode.OnPlayerPickupWick.connect(OnPlayerPickupWick)
 
-# probably not needed
-func CanPlayerTakeStep():
-	return StepsRemaining > 0
+func OnPlayerPickupWick():
+	StepsRemaining += DefaultSteps
+	DefaultSteps = BoostedDefaultSteps
+	StepTimerNode.UpdateStepAmount(StepsRemaining, DefaultSteps)
 
 func OnPlayerStepTaken():
 	if StepsRemaining > 0:
@@ -26,6 +34,7 @@ func OnPlayerStepTaken():
 		StepTimerNode.UpdateStepAmount(StepsRemaining, DefaultSteps)
 	if StepsRemaining <= 0:
 		PlayerNode.Explode()
+	StepUpdate.emit()
 
 func OnPlayerExploded():
 	LivesRemaining -= 1

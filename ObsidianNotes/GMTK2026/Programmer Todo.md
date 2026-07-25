@@ -10,7 +10,7 @@
 	- [ ] Player collision/explosion
 - [ ] Pickups
 	- [x] Scissors (win condition)
-	- [ ] Wick (improves defaultsteps by x)
+	- [x] Wick (improves defaultsteps by 8)
 - [ ] Obstacles
 	- [x] Static walls
 	- [x] Destructible walls

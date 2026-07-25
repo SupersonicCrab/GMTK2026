@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programmer Notes.md",
+                "file": "Programmer Todo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Programmer Notes"
+              "title": "Programmer Todo"
             }
           }
         ]
@@ -186,11 +186,11 @@
   },
   "active": "c8fd136183401cbb",
   "lastOpenFiles": [
-    "Programmer Todo.md",
-    "Asset Todo.md",
     "Programmer Notes.md",
-    "Level design todo.md",
+    "Programmer Todo.md",
     "Excalidraw/Whiteboard.excalidraw.md",
+    "Level design todo.md",
+    "Asset Todo.md",
     "Untitled",
     "Excalidraw/Assets/Pasted Image 20260722161127_098.png",
     "Excalidraw/Assets",

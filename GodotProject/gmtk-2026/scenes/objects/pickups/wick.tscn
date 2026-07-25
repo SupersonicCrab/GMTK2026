@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://dyjmc65kvlmpf"]
 
 [ext_resource type="PackedScene" uid="uid://e8ibx60gxorf" path="res://scenes/objects/pickups/pickup.tscn" id="1_eg8ie"]
+[ext_resource type="Script" uid="uid://c75ssdvqky5w" path="res://scripts/wick.gd" id="2_2uhrs"]
 
 [node name="Wick" unique_id=1086519541 instance=ExtResource("1_eg8ie")]
+script = ExtResource("2_2uhrs")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

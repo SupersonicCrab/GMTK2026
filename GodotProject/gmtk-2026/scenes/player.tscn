@@ -20,6 +20,9 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ngtbk"]
 size = Vector2(128, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8dis"]
+size = Vector2(32, 32)
+
 [node name="Player" type="Area2D" unique_id=851030699]
 collision_layer = 5
 script = ExtResource("1_3vyb7")
@@ -44,3 +47,13 @@ collision_mask = 2
 [node name="ExplosionCollision" type="CollisionShape2D" parent="ExplosionArea" unique_id=168450580]
 position = Vector2(32, 32)
 shape = SubResource("RectangleShape2D_ngtbk")
+
+[node name="DeathArea" type="Area2D" parent="." unique_id=77812462]
+collision_layer = 8
+collision_mask = 8
+
+[node name="DeathCollision" type="CollisionShape2D" parent="DeathArea" unique_id=300163529]
+position = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_g8dis")
+
+[connection signal="area_entered" from="DeathArea" to="." method="_on_death_area_area_entered"]
