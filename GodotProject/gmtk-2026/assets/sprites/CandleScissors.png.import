@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kutw22xgvtpd"
-path="res://.godot/imported/BombSpriteOutline.png-67e7771fa3e49639f00b732dbba30955.ctex"
+uid="uid://3gawu3galom0"
+path="res://.godot/imported/CandleScissors.png-29cab6dba631761eda09d90d4f0dce05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BombSpriteOutline.png"
-dest_files=["res://.godot/imported/BombSpriteOutline.png-67e7771fa3e49639f00b732dbba30955.ctex"]
+source_file="res://assets/sprites/CandleScissors.png"
+dest_files=["res://.godot/imported/CandleScissors.png-29cab6dba631761eda09d90d4f0dce05.ctex"]
 
 [params]
 

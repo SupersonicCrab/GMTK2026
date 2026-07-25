@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kutw22xgvtpd"
-path="res://.godot/imported/BombSpriteOutline.png-67e7771fa3e49639f00b732dbba30955.ctex"
+uid="uid://d2jb44wgp3ax4"
+path="res://.godot/imported/BombSpriteOutline.png-29777aa54b825b1ef3c4ca90e4122614.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BombSpriteOutline.png"
-dest_files=["res://.godot/imported/BombSpriteOutline.png-67e7771fa3e49639f00b732dbba30955.ctex"]
+source_file="res://assets/sprites/BombSpriteOutline.png"
+dest_files=["res://.godot/imported/BombSpriteOutline.png-29777aa54b825b1ef3c4ca90e4122614.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kutw22xgvtpd"
-path="res://.godot/imported/BombSpriteOutline.png-67e7771fa3e49639f00b732dbba30955.ctex"
+uid="uid://depvdgneuue1x"
+path="res://.godot/imported/WickSprite.png-d43951520347a597816534ef49280de6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BombSpriteOutline.png"
-dest_files=["res://.godot/imported/BombSpriteOutline.png-67e7771fa3e49639f00b732dbba30955.ctex"]
+source_file="res://assets/WickSprite.png"
+dest_files=["res://.godot/imported/WickSprite.png-d43951520347a597816534ef49280de6.ctex"]
 
 [params]
 
