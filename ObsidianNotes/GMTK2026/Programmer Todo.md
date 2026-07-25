@@ -14,9 +14,9 @@
 - [ ] Obstacles
 	- [x] Static walls
 	- [x] Destructible walls
-	- [ ] Lava
-		- [ ] Source block
-		- [ ] Falling lava
+	- [x] Lava
+		- [x] Source block
+		- [x] Falling lava
 	- [ ] Boulder (player can push but not pull)
 - [ ] UI
 	- [x] Main menu
