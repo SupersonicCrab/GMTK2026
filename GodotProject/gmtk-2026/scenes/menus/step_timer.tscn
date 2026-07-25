@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://cwvabxpj8iylp"]
+
+[ext_resource type="Texture2D" uid="uid://dl1hush0omt4d" path="res://assets/timer_animated.png" id="1_kylj2"]
+[ext_resource type="Script" uid="uid://cce7hyxj12ekd" path="res://scripts/step_timer.gd" id="1_nkji1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkji1"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4l5c"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(129, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_453mg"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(258, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ky4a"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(387, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxp3v"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(516, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqj0v"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(0, 129, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tkrv"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(129, 129, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usq5q"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(258, 129, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilyai"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(387, 129, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gxal"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(516, 129, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rduix"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(0, 258, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8lvf"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(129, 258, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isaox"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(258, 258, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n3q1"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(387, 258, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki6fn"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(516, 258, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fki83"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(0, 387, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34w1y"]
+atlas = ExtResource("1_kylj2")
+region = Rect2(129, 387, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkji1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4l5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_453mg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ky4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxp3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqj0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tkrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usq5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilyai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gxal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rduix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8lvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isaox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n3q1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ki6fn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fki83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34w1y")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StepTimer" type="Control" unique_id=190756583]
+z_index = 1
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -768.0
+offset_bottom = -768.0
+grow_vertical = 0
+script = ExtResource("1_nkji1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1025930363]
+position = Vector2(64, -64)
+sprite_frames = SubResource("SpriteFrames_dgbkm")
+
+[node name="LivesLabel" type="Label" parent="." unique_id=706907620]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -80.0
+offset_right = 82.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1

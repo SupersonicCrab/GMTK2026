@@ -21,4 +21,5 @@
 - [ ] UI
 	- [x] Main menu
 		- [x] Options menu
-	- [ ] Hud
+	- [x] Hud
+		- [ ] Stretch goal: Burning clock

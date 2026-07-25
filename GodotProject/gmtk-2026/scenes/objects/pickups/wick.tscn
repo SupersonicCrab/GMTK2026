@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dyjmc65kvlmpf"]
+
+[ext_resource type="PackedScene" uid="uid://e8ibx60gxorf" path="res://scenes/objects/pickups/pickup.tscn" id="1_eg8ie"]
+
+[node name="Wick" unique_id=1086519541 instance=ExtResource("1_eg8ie")]
