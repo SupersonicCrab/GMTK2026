@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dqic4hv1o8dgr"]
+
+[ext_resource type="Script" uid="uid://cqlkin1smnkme" path="res://scripts/lava_source.gd" id="1_15o04"]
+[ext_resource type="Texture2D" uid="uid://drrw1yddb6e32" path="res://assets/environment_tileset.png" id="2_r3coj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15o04"]
+atlas = ExtResource("2_r3coj")
+region = Rect2(260, 260, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15o04")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgbkm"]
+size = Vector2(64, 64)
+
+[node name="LavaFlow" type="Area2D" unique_id=1144637347]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_15o04")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=520274571]
+sprite_frames = SubResource("SpriteFrames_dgbkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1008903530]
+shape = SubResource("RectangleShape2D_dgbkm")
