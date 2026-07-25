@@ -1,18 +1,62 @@
 [gd_scene format=3 uid="uid://b0d3j8homko0n"]
 
-[ext_resource type="Script" path="res://fire_sprite.gd" id="1_71mpt"]
-[ext_resource type="Texture2D" path="res://assets/debug/debug_fire_sprite.png" id="2_10v8t"]
+[ext_resource type="Script" uid="uid://bl3xgxu8d4evp" path="res://scripts/fire_sprite.gd" id="1_10v8t"]
+[ext_resource type="Texture2D" uid="uid://1v8mwp30j3pj" path="res://assets/FlameSpriteOutline.png" id="1_71mpt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10v8t"]
+atlas = ExtResource("1_71mpt")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lah8"]
+atlas = ExtResource("1_71mpt")
+region = Rect2(65, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51rbr"]
+atlas = ExtResource("1_71mpt")
+region = Rect2(130, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7oe7s"]
+atlas = ExtResource("1_71mpt")
+region = Rect2(0, 65, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pa52y"]
+atlas = ExtResource("1_71mpt")
+region = Rect2(65, 65, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10v8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lah8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51rbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7oe7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pa52y")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(64, 64)
 
 [node name="FireSprite" type="Area2D" unique_id=113863199]
-script = ExtResource("1_71mpt")
-metadata/_custom_type_script = "uid://cab57wjvtvtaj"
+script = ExtResource("1_10v8t")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1993574701]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1206157918]
 position = Vector2(32, 32)
-texture = ExtResource("2_10v8t")
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame_progress = 0.04605363
+speed_scale = 1.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2045258082]
 position = Vector2(32, 32)

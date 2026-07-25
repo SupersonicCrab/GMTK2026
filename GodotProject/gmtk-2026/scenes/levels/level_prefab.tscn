@@ -104,4 +104,3 @@ position = Vector2(64, 64)
 
 [node name="FireSprite" parent="." unique_id=113863199 instance=ExtResource("6_k88ha")]
 position = Vector2(832, 576)
-script = null

@@ -34,7 +34,7 @@ func OnPlayerStepTaken():
 		StepTimerNode.UpdateStepAmount(StepsRemaining, DefaultSteps)
 	if StepsRemaining <= 0:
 		PlayerNode.Explode()
-	StepUpdate.emit()
+	StepUpdate.emit(PlayerNode.position)
 
 func OnPlayerExploded():
 	LivesRemaining -= 1
@@ -44,10 +44,12 @@ func OnPlayerExploded():
 	StepTimerNode.UpdateLivesAmount(LivesRemaining)
 	StepTimerNode.UpdateStepAmount(DefaultSteps, DefaultSteps)
 	StepsRemaining = DefaultSteps
+	UpdateNavRegion()
 	
 func GameOver():
 	print("level failed, restarting level. total steps taken" + str(TotalStepsTaken))
 	get_tree().reload_current_scene()
 
-func OnTerrainUpdated():
+func UpdateNavRegion():
+	await get_tree().process_frame
 	NavigationRegion2DNode.bake_navigation_polygon()
