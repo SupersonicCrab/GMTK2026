@@ -16,11 +16,16 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgbkm"]
 size = Vector2(64, 64)
 
-[node name="DestructableWall" type="Area2D" unique_id=820501119]
+[node name="DestructableWall" type="Area2D" unique_id=820501119 groups=["navigation_polygon_source_geometry_group"]]
 collision_layer = 3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1315733269]
 sprite_frames = SubResource("SpriteFrames_dgbkm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1048877618]
+shape = SubResource("RectangleShape2D_dgbkm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=95932548 groups=["navigation_polygon_source_geometry_group"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1119390860]
 shape = SubResource("RectangleShape2D_dgbkm")

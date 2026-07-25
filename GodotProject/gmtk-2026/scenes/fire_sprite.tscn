@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b0d3j8homko0n"]
+
+[ext_resource type="Script" path="res://fire_sprite.gd" id="1_71mpt"]
+[ext_resource type="Texture2D" path="res://assets/debug/debug_fire_sprite.png" id="2_10v8t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(64, 64)
+
+[node name="FireSprite" type="Area2D" unique_id=113863199]
+script = ExtResource("1_71mpt")
+metadata/_custom_type_script = "uid://cab57wjvtvtaj"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1993574701]
+position = Vector2(32, 32)
+texture = ExtResource("2_10v8t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2045258082]
+position = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1353484007]
+path_desired_distance = 0.1
+target_desired_distance = 0.1

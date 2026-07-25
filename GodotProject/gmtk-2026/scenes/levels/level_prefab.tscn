@@ -5,13 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cjsj7aduji3mm" path="res://scenes/objects/destructible_wall.tscn" id="3_nkmkj"]
 [ext_resource type="Texture2D" uid="uid://dv4ay11tp8ypm" path="res://assets/debug/debug_static_wall.png" id="4_fl5jg"]
 [ext_resource type="PackedScene" uid="uid://cwvabxpj8iylp" path="res://scenes/menus/step_timer.tscn" id="5_c2bev"]
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4q1i7"]
-scenes/1/scene = ExtResource("3_nkmkj")
-
-[sub_resource type="TileSet" id="TileSet_yf5fn"]
-tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetScenesCollectionSource_4q1i7")
+[ext_resource type="PackedScene" uid="uid://b0d3j8homko0n" path="res://scenes/fire_sprite.tscn" id="6_k88ha"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q1i7"]
 texture = ExtResource("4_fl5jg")
@@ -19,27 +13,43 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_k88ha"]
+scenes/1/scene = ExtResource("3_nkmkj")
+
 [sub_resource type="TileSet" id="TileSet_57qmd"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4q1i7")
+sources/3 = SubResource("TileSetScenesCollectionSource_k88ha")
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_g4v7s"]
+vertices = PackedVector2Array(960, 640, 960, 704, 896, 704, 128, 704, 64, 704, 64, 640, 64, 384, 64, 320, 128, 320, 384, 128, 384, 64, 448, 64, 896, 64, 960, 64, 960, 128, 960, 192, 832, 64, 768, 64, 960, 256, 384, 320, 960, 576, 832, 704, 960, 512, 768, 704, 192, 704, 64, 576, 256, 704, 64, 512, 192, 320, 256, 320, 64, 448, 320, 704, 320, 320, 384, 704, 448, 704, 512, 704, 576, 704, 640, 704, 704, 704, 960, 448, 960, 384, 960, 320, 704, 64, 640, 64, 384, 256, 576, 64, 384, 192, 512, 64, 320, 128, 320, 192, 320, 256, 256, 256, 192, 256, 128, 256, 64, 256, 64, 192, 64, 128, 64, 64, 128, 64, 192, 64, 256, 64, 320, 64)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 11), PackedInt32Array(12, 13, 14), PackedInt32Array(12, 14, 15, 16), PackedInt32Array(17, 16, 15, 18, 19), PackedInt32Array(20, 0, 2, 21), PackedInt32Array(22, 20, 21, 23, 19), PackedInt32Array(24, 3, 5, 25), PackedInt32Array(26, 24, 25, 27, 28, 29), PackedInt32Array(30, 6, 8, 28), PackedInt32Array(27, 30, 28), PackedInt32Array(31, 26, 29, 32), PackedInt32Array(33, 31, 32, 19), PackedInt32Array(34, 33, 19), PackedInt32Array(35, 34, 19), PackedInt32Array(36, 35, 19), PackedInt32Array(37, 36, 19), PackedInt32Array(38, 37, 19), PackedInt32Array(23, 38, 19), PackedInt32Array(39, 22, 19), PackedInt32Array(40, 39, 19), PackedInt32Array(41, 40, 19), PackedInt32Array(18, 41, 19), PackedInt32Array(42, 17, 19), PackedInt32Array(43, 42, 19, 44), PackedInt32Array(45, 43, 44, 46), PackedInt32Array(47, 45, 46, 9), PackedInt32Array(47, 9, 11), PackedInt32Array(48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 0, 1024, 0, 1024, 768, 0, 768)])
+source_geometry_mode = 2
+agent_radius = 0.0
 
 [node name="LevelPrefab" type="Node2D" unique_id=1377552078]
 
-[node name="LevelManager" parent="." unique_id=776668038 node_paths=PackedStringArray("PlayerNode", "StepTimerNode") instance=ExtResource("1_c2bev")]
+[node name="LevelManager" parent="." unique_id=776668038 node_paths=PackedStringArray("PlayerNode", "StepTimerNode", "NavigationRegion2DNode") instance=ExtResource("1_c2bev")]
 PlayerNode = NodePath("../Player")
 StepTimerNode = NodePath("../StepTimer")
+NavigationRegion2DNode = NodePath("../NavigationRegion2D")
 
-[node name="ScenesTileMap" type="TileMapLayer" parent="." unique_id=1052665844]
-tile_set = SubResource("TileSet_yf5fn")
-
-[node name="ArtTileMap" type="TileMapLayer" parent="." unique_id=788070684]
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAcAAAAAAAAAAAAPAAgAAAAAAAAAAAAPAAkAAAAAAAAAAAAPAAoAAAAAAAAAAAAPAAsAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAOAAsAAAAAAAAAAAANAAsAAAAAAAAAAAAMAAsAAAAAAAAAAAALAAsAAAAAAAAAAAAKAAsAAAAAAAAAAAAJAAsAAAAAAAAAAAAIAAsAAAAAAAAAAAAHAAsAAAAAAAAAAAAGAAsAAAAAAAAAAAAFAAsAAAAAAAAAAAAEAAsAAAAAAAAAAAADAAsAAAAAAAAAAAABAAsAAAAAAAAAAAACAAsAAAAAAAAAAAA=")
+[node name="Walls" type="TileMapLayer" parent="." unique_id=788070684 groups=["navigation_polygon_source_geometry_group"]]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAcAAAAAAAAAAAAPAAgAAAAAAAAAAAAPAAkAAAAAAAAAAAAPAAoAAAAAAAAAAAAPAAsAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAOAAsAAAAAAAAAAAANAAsAAAAAAAAAAAAMAAsAAAAAAAAAAAALAAsAAAAAAAAAAAAKAAsAAAAAAAAAAAAJAAsAAAAAAAAAAAAIAAsAAAAAAAAAAAAHAAsAAAAAAAAAAAAGAAsAAAAAAAAAAAAFAAsAAAAAAAAAAAAEAAsAAAAAAAAAAAADAAsAAAAAAAAAAAABAAsAAAAAAAAAAAACAAsAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAwAAAAAAAQADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAIAAwAAAAAAAQAFAAEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_57qmd")
+
+[node name="StepTimer" parent="." unique_id=190756583 instance=ExtResource("5_c2bev")]
+visible = false
+offset_top = 768.0
+offset_bottom = 768.0
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=672947269]
+navigation_polygon = SubResource("NavigationPolygon_g4v7s")
 
 [node name="Player" parent="." unique_id=851030699 instance=ExtResource("2_k88ha")]
 position = Vector2(64, 64)
 
-[node name="StepTimer" parent="." unique_id=190756583 instance=ExtResource("5_c2bev")]
-offset_top = 768.0
-offset_bottom = 768.0
+[node name="FireSprite" parent="." unique_id=113863199 instance=ExtResource("6_k88ha")]
+position = Vector2(832, 576)

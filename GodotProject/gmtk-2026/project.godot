@@ -26,6 +26,10 @@ window/size/viewport_height=768
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+navigation_polygon_source_geometry_group=""
+
 [input]
 
 MoveRight={

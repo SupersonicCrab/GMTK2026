@@ -8,6 +8,7 @@ var StepsRemaining = DefaultSteps
 
 @export var PlayerNode : Player
 @export var StepTimerNode : StepTimer
+@export var NavigationRegion2DNode : NavigationRegion2D
 
 func _ready() -> void:
 	PlayerNode.OnPlayerStepTaken.connect(OnPlayerStepTaken)
@@ -38,3 +39,6 @@ func OnPlayerExploded():
 func GameOver():
 	print("level failed, restarting level. total steps taken" + str(TotalStepsTaken))
 	get_tree().reload_current_scene()
+
+func OnTerrainUpdated():
+	NavigationRegion2DNode.bake_navigation_polygon()
