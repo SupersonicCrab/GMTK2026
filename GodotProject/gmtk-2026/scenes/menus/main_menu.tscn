@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://pcq8rppqacnt"]
 
 [ext_resource type="Script" uid="uid://cd8h3l27jmiis" path="res://scripts/main_menu.gd" id="1_xqga4"]
-[ext_resource type="Texture2D" uid="uid://gwy700dfvr86" path="res://assets/MainMenuBG.png" id="2_ovrgc"]
+[ext_resource type="Texture2D" uid="uid://p7b8nes272i2" path="res://assets/MainMenuBG2.png" id="2_2o76q"]
 [ext_resource type="Texture2D" uid="uid://bdgqe6mb16gv0" path="res://assets/UISpritesheet.png" id="3_2o76q"]
+[ext_resource type="AudioStream" uid="uid://coxxyp5qy6eu8" path="res://assets/audio/Music/honey-bear-loop.mp3" id="4_6bivr"]
+[ext_resource type="AudioStream" uid="uid://bpef7bjhdhp3y" path="res://assets/audio/Ambience.ogg" id="5_imvie"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8x3pl"]
 atlas = ExtResource("3_2o76q")
@@ -23,9 +25,11 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_xqga4")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=139346696]
-texture = ExtResource("2_ovrgc")
-centered = false
+[node name="Background" type="TextureRect" parent="." unique_id=1875643602]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_2o76q")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=63183038]
 layout_mode = 0
@@ -75,13 +79,22 @@ text = "Options
 layout_mode = 2
 text = "Exit"
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=63818643]
+[node name="TempLogo" type="TextureRect" parent="." unique_id=63818643]
 layout_mode = 0
-offset_left = 395.0
-offset_top = 160.0
-offset_right = 971.0
-offset_bottom = 344.0
+offset_left = 370.0
+offset_top = 192.0
+offset_right = 946.0
+offset_bottom = 376.0
 texture = SubResource("AtlasTexture_foxxn")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1790908548]
+stream = ExtResource("4_6bivr")
+autoplay = true
+bus = &"Music"
+
+[node name="Ambience" type="AudioStreamPlayer2D" parent="." unique_id=160657536]
+stream = ExtResource("5_imvie")
+bus = &"Ambience"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
