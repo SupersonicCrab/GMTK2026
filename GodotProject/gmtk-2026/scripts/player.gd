@@ -14,15 +14,20 @@ func _ready() -> void:
 @onready var DeathCollision = $DeathArea/DeathCollision
 @onready var ExplosionArea = $ExplosionArea
 
+var DestroyedWallScene = preload("res://scenes/objects/destroyed_wall.tscn")
+
 func Explode():
 	if tween:
 		tween.stop()
 	var OverlappingDestructables = ExplosionArea.get_overlapping_areas()
 	for Destructable : Area2D in OverlappingDestructables:
+		var DestroyedWallInstance : Node2D = DestroyedWallScene.instantiate()
+		get_tree().current_scene.add_child(DestroyedWallInstance)
+		DestroyedWallInstance.position = Destructable.position
 		Destructable.queue_free()
 	var ExplosionInstance : Node2D = ExplosionScene.instantiate()
-	get_tree().root.add_child(ExplosionInstance)
-	ExplosionInstance.global_position = position
+	get_tree().current_scene.add_child(ExplosionInstance)
+	ExplosionInstance.position = position
 	position = InitialPosition
 	OnPlayerExploded.emit()
 

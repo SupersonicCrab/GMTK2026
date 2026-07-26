@@ -18,7 +18,7 @@
 		- [x] Falling lava
 	- [x] Boulder (player can push but not pull)
 		- [ ] Stretch goal: Move player while pushing
-- [ ] UI
+- [x] UI
 	- [x] Main menu
 		- [x] Options menu
 	- [x] Hud

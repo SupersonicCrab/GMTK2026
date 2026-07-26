@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://4robtpid85tw"]
+
+[ext_resource type="Texture2D" uid="uid://drrw1yddb6e32" path="res://assets/environment_tileset.png" id="1_sscbo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhj08"]
+atlas = ExtResource("1_sscbo")
+region = Rect2(390, 260, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhj08")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DestroyedWall" type="Node2D" unique_id=475858704]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1789699461]
+sprite_frames = SubResource("SpriteFrames_dgbkm")
