@@ -50,8 +50,9 @@ animations = [{
 size = Vector2(64, 64)
 
 [node name="FireSprite" type="Area2D" unique_id=113863199]
+z_index = 1
 collision_layer = 8
-collision_mask = 0
+collision_mask = 8
 script = ExtResource("1_10v8t")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1206157918]
@@ -65,3 +66,5 @@ shape = SubResource("RectangleShape2D_g4v7s")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1353484007]
 path_desired_distance = 0.1
 target_desired_distance = 0.1
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

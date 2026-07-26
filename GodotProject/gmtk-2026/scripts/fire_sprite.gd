@@ -4,11 +4,14 @@ extends Area2D
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 
 var LevelManagerNode : LevelManager
+var OriginalPosition
 
 func _ready():
 	LevelManagerNode = get_tree().current_scene.get_node("LevelManager")
 	LevelManagerNode.StepUpdate.connect(onStepUpdate)
+	LevelManagerNode.PlayerNode.OnPlayerExploded.connect(OnPlayerExploded)
 	sprite_2d.play("default")
+	OriginalPosition = position
 
 func onStepUpdate(playerPosition: Vector2):
 	navigation_agent_2d.set_target_position(playerPosition)
@@ -31,7 +34,16 @@ func onStepUpdate(playerPosition: Vector2):
 			sprite_2d.rotation_degrees = -90
 		Vector2(0,1):
 			sprite_2d.rotation_degrees = 90
-	
 	var tween = create_tween()
 	tween.tween_property(self, "position", position + direction * Constants.TileSize, 1.0/4).set_trans(Tween.TRANS_SINE)
 	await tween.finished
+
+func OnPlayerExploded():
+	position = OriginalPosition
+
+#func _on_area_entered(area: Area2D) -> void:
+#	if area.owner == LevelManagerNode.PlayerNode:
+#		if tween:
+#			tween.stop()
+#		position = OriginalPosition
+#		LevelManagerNode.PlayerNode.Explode()

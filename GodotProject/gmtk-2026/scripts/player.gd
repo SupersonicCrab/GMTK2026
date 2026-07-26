@@ -15,6 +15,7 @@ func _ready() -> void:
 @onready var ExplosionArea = $ExplosionArea
 
 func Explode():
+	DeathCollision.disabled = true
 	var OverlappingDestructables = ExplosionArea.get_overlapping_areas()
 	for Destructable : Area2D in OverlappingDestructables:
 		Destructable.queue_free()
@@ -23,11 +24,12 @@ func Explode():
 	ExplosionInstance.global_position = position
 	position = InitialPosition
 	OnPlayerExploded.emit()
+	DeathCollision.disabled = false
 
 @onready var Raycast = $RayCast2D
+@onready var DeathArea = $DeathArea
 
 var CurrentlyMoving = false
-var MarkedForDeath = false
 
 func Move(xydirection):
 	get_viewport().set_input_as_handled()
@@ -39,14 +41,13 @@ func Move(xydirection):
 		
 		if !Raycast.is_colliding():
 			CurrentlyMoving = true
+			OnPlayerStepTaken.emit()
 			var tween = create_tween()
 			tween.tween_property(self, "position",
 				position + xydirection * Constants.TileSize, 1.0/4).set_trans(Tween.TRANS_SINE)
 			await tween.finished
-			OnPlayerStepTaken.emit()
 			CurrentlyMoving = false
-		if MarkedForDeath:
-			MarkedForDeath = false
+		if DeathArea.get_overlapping_areas().size() > 0:
 			Explode()
 	
 func _input(event):
@@ -58,6 +59,3 @@ func _input(event):
 		Move(Vector2(0, 1))
 	elif event.is_action_pressed("MoveUp"):
 		Move(Vector2(0, -1))
-
-func _on_death_area_area_entered(area: Area2D) -> void:
-	MarkedForDeath = true
