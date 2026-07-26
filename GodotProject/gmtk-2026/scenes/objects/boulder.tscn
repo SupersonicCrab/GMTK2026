@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bs6d76lr81g8f"]
 
-[ext_resource type="Script" uid="uid://cuamai82fgvwi" path="res://scenes/objects/boulder.gd" id="1_bhlh1"]
+[ext_resource type="Script" uid="uid://cuamai82fgvwi" path="res://scripts/boulder.gd" id="1_bhlh1"]
 [ext_resource type="Texture2D" uid="uid://drrw1yddb6e32" path="res://assets/environment_tileset.png" id="1_gny4g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bhlh1"]
@@ -29,5 +29,9 @@ sprite_frames = SubResource("SpriteFrames_dgbkm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=827953079]
 shape = SubResource("RectangleShape2D_dgbkm")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1649011943]
+target_position = Vector2(0, 64)
+collide_with_areas = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

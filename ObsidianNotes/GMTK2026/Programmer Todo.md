@@ -4,7 +4,6 @@
 	- [x] Exploding
 		- [x] Explosion vfx
 		- [x] Position resetting
-	- [ ] Stretch goal: Fog of war (map revealed permanently as player explores, map starts out occluded by fog asset)
 - [ ] Fire sprite
 	- [x] Pathfinding
 	- [ ] Player collision/explosion
@@ -17,7 +16,8 @@
 	- [x] Lava
 		- [x] Source block
 		- [x] Falling lava
-	- [ ] Boulder (player can push but not pull)
+	- [x] Boulder (player can push but not pull)
+		- [ ] Stretch goal: Move player while pushing
 - [ ] UI
 	- [x] Main menu
 		- [x] Options menu

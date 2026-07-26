@@ -51,5 +51,6 @@ func GameOver():
 	get_tree().reload_current_scene()
 
 func UpdateNavRegion():
-	await get_tree().process_frame
-	NavigationRegion2DNode.bake_navigation_polygon()
+	if get_tree():
+		await get_tree().process_frame
+		NavigationRegion2DNode.bake_navigation_polygon()

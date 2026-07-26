@@ -1,8 +1,9 @@
-extends Area2D
+extends Node2D
 class_name Player
 
 signal OnPlayerExploded
 signal OnPlayerStepTaken
+signal OnPlayerTryStep
 
 var ExplosionScene = preload("res://scenes/vfx/explosion.tscn")
 var InitialPosition
@@ -34,6 +35,8 @@ func Move(xydirection):
 	if !CurrentlyMoving:
 		Raycast.target_position = xydirection * Constants.TileSize
 		Raycast.force_raycast_update()
+		OnPlayerTryStep.emit()
+		
 		if !Raycast.is_colliding():
 			CurrentlyMoving = true
 			var tween = create_tween()
