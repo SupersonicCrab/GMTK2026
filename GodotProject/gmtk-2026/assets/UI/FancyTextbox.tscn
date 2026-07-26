@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dim01yac01lk3"]
+
+[ext_resource type="Texture2D" uid="uid://b1nub7586vn3" path="res://assets/UI/UISpritesheet2.png" id="1_g7481"]
+[ext_resource type="FontFile" uid="uid://b0i7ondcqjl1q" path="res://assets/UI/ADAXI.ttf" id="2_ikkwm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84trb"]
+atlas = ExtResource("1_g7481")
+region = Rect2(320, 256, 448, 320)
+
+[node name="FancyTextbox" type="Control" unique_id=2020839865]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=642608575]
+layout_mode = 0
+offset_right = 101.2
+offset_bottom = 77.0
+texture = SubResource("AtlasTexture_84trb")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Label" type="Label" parent="NinePatchRect" unique_id=1830658786]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ikkwm")
+text = "Text"

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bqxv4jjt0m1u2" path="res://assets/UI/MenuBackground.png" id="2_6ha5v"]
 [ext_resource type="Texture2D" uid="uid://b1nub7586vn3" path="res://assets/UI/UISpritesheet2.png" id="2_o4aij"]
 [ext_resource type="FontFile" uid="uid://c28iyjhkvxpby" path="res://assets/UI/Kenney Pixel.ttf" id="3_25hw2"]
+[ext_resource type="FontFile" uid="uid://b0i7ondcqjl1q" path="res://assets/UI/ADAXI.ttf" id="6_avx35"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ix6sx"]
 atlas = ExtResource("1_evl5o")
@@ -128,6 +129,20 @@ theme_override_font_sizes/font_size = 64
 text = "Run!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=2099867994]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -299.5
+offset_top = -319.0
+offset_right = 299.5
+offset_bottom = -231.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("6_avx35")
+theme_override_font_sizes/font_size = 64
+text = "The story so far...."
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

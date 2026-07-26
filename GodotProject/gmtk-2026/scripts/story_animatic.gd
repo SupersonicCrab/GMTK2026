@@ -13,3 +13,7 @@ func _ready() -> void:
 func _on_animated_sprite_2d_animation_finished() -> void:
 	ButtonNode.visible = true
 	ButtonLabelNode.visible = true
+
+
+func _on_animated_sprite_2d_frame_changed() -> void:
+	pass # Replace with function body.

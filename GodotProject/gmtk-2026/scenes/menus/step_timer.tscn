@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwvabxpj8iylp"]
 
-[ext_resource type="Texture2D" uid="uid://dl1hush0omt4d" path="res://assets/timer_animated.png" id="1_kylj2"]
+[ext_resource type="Texture2D" uid="uid://dl1hush0omt4d" path="res://assets/UI/timer_animated.png" id="1_kylj2"]
 [ext_resource type="Script" uid="uid://cce7hyxj12ekd" path="res://scripts/step_timer.gd" id="1_nkji1"]
 [ext_resource type="AudioStream" uid="uid://kba0nox3mcp7" path="res://assets/audio/FuseLoop.mp3" id="3_6rhk2"]
 [ext_resource type="Texture2D" uid="uid://d3xeq310dl40k" path="res://assets/fire_timer_animated.png" id="3_c6l3c"]

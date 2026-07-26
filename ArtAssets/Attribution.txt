@@ -1,7 +1,9 @@
 Kenny
 https://kenney.nl/assets/impact-sounds
 https://kenney.nl/assets/ui-pack-adventure
+https://kenney.nl/assets/kenney-fonts
  
+Audio
 Joth - https://opengameart.org/content/jrpg-keys
 TinyWorlds - https://opengameart.org/content/happy-adventure-loop
 TinyWorlds - https://opengameart.org/content/honey-bear
@@ -19,5 +21,4 @@ Fission9 - https://freesound.org/people/Fission9/sounds/474849/
 Fission9 - https://freesound.org/people/Fission9/sounds/474851/
 
 Fonts
-https://kenney.nl/assets/kenney-fonts
 https://github.com/lascuolaopensource/bca-font-Adaxi 

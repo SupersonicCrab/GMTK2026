@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bqxv4jjt0m1u2" path="res://assets/UI/MenuBackground.png" id="2_1hnlc"]
 [ext_resource type="Texture2D" uid="uid://b1nub7586vn3" path="res://assets/UI/UISpritesheet2.png" id="3_ng0o5"]
 [ext_resource type="FontFile" uid="uid://c28iyjhkvxpby" path="res://assets/UI/Kenney Pixel.ttf" id="4_8r73w"]
-[ext_resource type="Texture2D" uid="uid://5b3dbaxgupq6" path="res://assets/JamLogo.png" id="7_8r73w"]
+[ext_resource type="Texture2D" uid="uid://dh8lo3d0i5ui8" path="res://assets/UI/Artboard1.png" id="7_1hnlc"]
+[ext_resource type="Texture2D" uid="uid://5b3dbaxgupq6" path="res://assets/UI/JamLogo.png" id="7_8r73w"]
 [ext_resource type="Texture2D" uid="uid://35jlraqwwf3v" path="res://assets/UI/MainMenuCal.png" id="8_50h1w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84trb"]
@@ -41,6 +42,8 @@ layout_mode = 0
 offset_left = 64.0
 offset_right = 320.0
 offset_bottom = 768.0
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = -261
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1507284707]
 layout_mode = 2
@@ -94,6 +97,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Exit" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1268020380]
+visible = false
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_84trb")
 texture_pressed = SubResource("AtlasTexture_8r73w")
@@ -115,6 +119,20 @@ text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TSSCLogo" type="Sprite2D" parent="MarginContainer/VBoxContainer" unique_id=1908659450]
+position = Vector2(157, 467)
+scale = Vector2(0.22133927, 0.22133927)
+texture = ExtResource("7_1hnlc")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TSSCLogo" unique_id=968924203]
+offset_left = -510.52847
+offset_top = 275.59506
+offset_right = 596.47156
+offset_bottom = 378.25375
+theme_override_font_sizes/font_size = 64
+text = "A Team Supersonic Crab Production"
+metadata/_edit_use_anchors_ = true
+
 [node name="Logo" type="TextureRect" parent="." unique_id=552471946]
 layout_mode = 0
 offset_left = 372.0
@@ -125,10 +143,10 @@ texture = ExtResource("7_8r73w")
 
 [node name="LilCal" type="TextureRect" parent="." unique_id=1225662213]
 layout_mode = 0
-offset_left = -313.0
-offset_top = -142.0
-offset_right = 961.6666
-offset_bottom = 814.0
+offset_left = -294.0
+offset_top = -137.0
+offset_right = 980.6666
+offset_bottom = 819.0
 mouse_filter = 2
 texture = ExtResource("8_50h1w")
 
