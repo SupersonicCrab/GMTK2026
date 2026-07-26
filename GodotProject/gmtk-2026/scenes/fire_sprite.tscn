@@ -50,7 +50,7 @@ animations = [{
 size = Vector2(64, 64)
 
 [node name="FireSprite" type="Area2D" unique_id=113863199]
-collision_layer = 9
+collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_10v8t")
 
