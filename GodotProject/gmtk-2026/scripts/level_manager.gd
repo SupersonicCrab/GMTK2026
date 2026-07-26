@@ -23,6 +23,7 @@ func _ready() -> void:
 		WickNode.OnPlayerPickupWick.connect(OnPlayerPickupWick)
 	var MusicManagerReference = MusicManager as MusicManagerNode
 	MusicManagerReference.SwitchMusic("res://assets/audio/Music/happy_adveture.mp3")
+	UpdateNavRegion()
 
 func OnPlayerPickupWick():
 	StepsRemaining += DefaultSteps
