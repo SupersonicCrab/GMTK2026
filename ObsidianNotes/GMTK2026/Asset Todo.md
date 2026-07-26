@@ -1,12 +1,12 @@
 - [ ] ~~Moodboard~~
 - [ ] Main character sprites
-	- [ ] idle
-	- [ ] walking (stretch)
+	- [x] idle
+	- [x] walking (stretch)
 	- [ ] imminent detonation (stretch)
 	- [ ] detonate (boom)
 - [ ] Enemy sprites
-	- [ ] idle
-	- [ ] walking/flying (stretch)
+	- [x] idle
+	- [x] walking/flying (stretch)
 	- [ ] emote (stretch)
 - [ ] Environment tilesheet
 	- [x] destructible walls
@@ -19,21 +19,21 @@
 	- [x] undiscovered walls
 	- [x] floor
 - [ ] Item sprites
-	- [ ] wick item
-	- [ ] scissors (level end)
-		- [ ] stairs
-	- [ ] boulders
+	- [x] wick item
+	- [x] scissors (level end)
+		- [x] stairs
+	- [x] boulders
 - [ ]  UI/UX
 	- [ ] buttons (stretch)
 	- [x] text boxes 
 	- [ ] text
 		- [ ] instructions
-		- [ ] story
-			- [ ] could do an animatic instead (stretch)
+		- [x] story
+			- [x] could do an animatic instead (stretch)
 	- [x] timer/clock
 		- [x] total lives remaining
 		- [x] steps remaining
-	- [ ] win/lose screen 
+	- [x] win/lose screen 
 	- [ ] options menu (stretch)
 	- [ ] main menu (stretch-ish)
 - [ ] itch assets
