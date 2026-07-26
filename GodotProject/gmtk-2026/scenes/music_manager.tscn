@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://kmvu6xygeaxv" path="res://scripts/music_manager.gd" id="1_jd6i5"]
 [ext_resource type="AudioStream" uid="uid://bpef7bjhdhp3y" path="res://assets/audio/Ambience.ogg" id="1_tn5dr"]
+[ext_resource type="AudioStream" uid="uid://dr3d3svnaw3by" path="res://assets/audio/CompleteLevel.wav" id="3_jd6i5"]
 
 [node name="MusicManager" type="Node2D" unique_id=951885309]
 script = ExtResource("1_jd6i5")
@@ -13,3 +14,7 @@ bus = &"Music"
 stream = ExtResource("1_tn5dr")
 autoplay = true
 bus = &"Ambience"
+
+[node name="CompleteLevelSFX" type="AudioStreamPlayer" parent="." unique_id=2008934834]
+stream = ExtResource("3_jd6i5")
+bus = &"SFX"

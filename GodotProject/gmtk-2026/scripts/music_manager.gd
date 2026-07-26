@@ -2,6 +2,7 @@ extends Node2D
 class_name MusicManagerNode
 
 @onready var Music : AudioStreamPlayer = $Music
+@onready var CompleteLevelSFX : AudioStreamPlayer = $CompleteLevelSFX
 
 func SwitchMusic(StreamString : String):
 	var AudioStreamReference = load(StreamString) as AudioStream
@@ -10,3 +11,6 @@ func SwitchMusic(StreamString : String):
 		Music.stop()
 		Music.set_stream(AudioStreamReference)
 		Music.play()
+
+func OnLevelComplete():
+	CompleteLevelSFX.play()
