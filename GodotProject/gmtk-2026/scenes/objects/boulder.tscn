@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bs6d76lr81g8f"]
+
+[ext_resource type="Script" uid="uid://cuamai82fgvwi" path="res://scenes/objects/boulder.gd" id="1_bhlh1"]
+[ext_resource type="Texture2D" uid="uid://drrw1yddb6e32" path="res://assets/environment_tileset.png" id="1_gny4g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhlh1"]
+atlas = ExtResource("1_gny4g")
+region = Rect2(130, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhlh1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgbkm"]
+size = Vector2(64, 64)
+
+[node name="Boulder" type="Area2D" unique_id=1578240430]
+script = ExtResource("1_bhlh1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2003195530]
+sprite_frames = SubResource("SpriteFrames_dgbkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=827953079]
+shape = SubResource("RectangleShape2D_dgbkm")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
