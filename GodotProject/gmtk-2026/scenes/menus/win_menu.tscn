@@ -1,14 +1,9 @@
 [gd_scene format=3 uid="uid://c0181f6325sok"]
 
-[ext_resource type="Texture2D" uid="uid://b3kse3yyvkq6c" path="res://assets/UI/Win.png" id="1_hadx3"]
 [ext_resource type="Script" uid="uid://drfj7e14acxgf" path="res://scripts/win_menu.gd" id="1_nlpyu"]
-[ext_resource type="Texture2D" uid="uid://bqxv4jjt0m1u2" path="res://assets/UI/MenuBackground.png" id="2_meh88"]
+[ext_resource type="Texture2D" uid="uid://d1pi5owjqy18l" path="res://assets/UI/Winscreen.png" id="2_h5r23"]
 [ext_resource type="Texture2D" uid="uid://b1nub7586vn3" path="res://assets/UI/UISpritesheet2.png" id="3_h5r23"]
 [ext_resource type="FontFile" uid="uid://c28iyjhkvxpby" path="res://assets/UI/Kenney Pixel.ttf" id="4_meh88"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_efmxl"]
-atlas = ExtResource("3_h5r23")
-region = Rect2(320, 256, 448, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_npby5"]
 atlas = ExtResource("3_h5r23")
@@ -46,27 +41,7 @@ offset_right = 512.0
 offset_bottom = 384.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_meh88")
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=693207674]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -450.8
-offset_top = -322.0
-offset_right = 450.8
-offset_bottom = 322.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_efmxl")
-stretch_mode = 5
-
-[node name="Win" type="Sprite2D" parent="." unique_id=419047083]
-position = Vector2(0, -67)
-texture = ExtResource("1_hadx3")
+texture = ExtResource("2_h5r23")
 
 [node name="MainMenu" type="TextureButton" parent="." unique_id=502341929]
 layout_mode = 1
@@ -76,9 +51,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -160.0
-offset_top = 100.0
+offset_top = 177.0
 offset_right = 160.0
-offset_bottom = 228.0
+offset_bottom = 305.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = SubResource("AtlasTexture_npby5")
@@ -90,6 +65,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -100,25 +77,5 @@ theme_override_font_sizes/font_size = 64
 text = "Main Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Safe" type="Label" parent="." unique_id=446249049]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -202.0
-offset_top = 12.0
-offset_right = 206.0
-offset_bottom = 60.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.29, 0.29, 0.29, 0)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_meh88")
-theme_override_font_sizes/font_size = 64
-text = "You did it! Cal is safe!"
 
 [connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
