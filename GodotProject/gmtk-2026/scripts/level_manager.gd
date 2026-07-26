@@ -12,9 +12,10 @@ signal StepUpdate
 @export var WickNode : Wick
 
 var TotalStepsTaken = 0
-var StepsRemaining = DefaultSteps
+var StepsRemaining = 0
 
 func _ready() -> void:
+	StepsRemaining = DefaultSteps
 	if PlayerNode:
 		PlayerNode.OnPlayerStepTaken.connect(OnPlayerStepTaken)
 		PlayerNode.OnPlayerExploded.connect(OnPlayerExploded)
@@ -31,10 +32,10 @@ func OnPlayerStepTaken():
 		StepsRemaining -= 1
 		TotalStepsTaken += 1
 		print("player moved " + str(StepsRemaining) + " steps remaining")
+		StepUpdate.emit(PlayerNode.position)
 		StepTimerNode.UpdateStepAmount(StepsRemaining, DefaultSteps)
 	if StepsRemaining <= 0:
 		PlayerNode.Explode()
-	StepUpdate.emit(PlayerNode.position)
 
 func OnPlayerExploded():
 	LivesRemaining -= 1

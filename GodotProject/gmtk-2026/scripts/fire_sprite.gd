@@ -16,7 +16,7 @@ func _ready():
 var tween
 
 func onStepUpdate(playerPosition: Vector2):
-	navigation_agent_2d.set_target_position(playerPosition)
+	navigation_agent_2d.set_target_position(playerPosition + Vector2(32, 32))
 	# Exits early if the player is not reachable
 	if not navigation_agent_2d.is_target_reachable():
 		return
@@ -24,7 +24,10 @@ func onStepUpdate(playerPosition: Vector2):
 	var next_pos = navigation_agent_2d.get_next_path_position()
 	# Convert the direction into simple directions Left, Right, Up, Down
 	var direction = position.direction_to(next_pos)
-	direction = Vector2(direction.x/abs(direction.x), 0) if abs(direction.x) > abs(direction.y) else Vector2(0, direction.y/abs(direction.y))
+	if abs(direction.y) > abs(direction.x):
+		direction = Vector2(0, direction.y).normalized()
+	else:
+		direction = Vector2(direction.x, 0).normalized()
 	
 	# Make fire dude rotate around
 	sprite_2d.flip_h = false

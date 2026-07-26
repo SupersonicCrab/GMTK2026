@@ -81,11 +81,11 @@ sources/0 = SubResource("TileSetAtlasSource_4q1i7")
 sources/3 = SubResource("TileSetScenesCollectionSource_k88ha")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_g4v7s"]
-vertices = PackedVector2Array(960, 128, 960, 192, 960, 256, 960, 320, 960, 384, 960, 448, 960, 512, 960, 576, 960, 640, 960, 704, 896, 704, 832, 704, 768, 704, 704, 704, 640, 704, 576, 704, 512, 704, 448, 704, 384, 704, 320, 704, 256, 704, 192, 704, 128, 704, 64, 704, 64, 640, 64, 576, 64, 512, 64, 448, 64, 384, 64, 320, 64, 256, 64, 192, 64, 128, 64, 64, 128, 64, 192, 64, 256, 64, 320, 64, 384, 64, 448, 64, 512, 64, 576, 64, 640, 64, 704, 64, 768, 64, 832, 64, 896, 64, 960, 64)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47)])
+vertices = PackedVector2Array(929, 673, 95, 673, 95, 95, 929, 95)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(0, 0, 1024, 0, 1024, 768, 0, 768)])
 source_geometry_mode = 2
-agent_radius = 0.0
+agent_radius = 31.0
 
 [node name="LevelPrefab" type="Node2D" unique_id=1377552078]
 

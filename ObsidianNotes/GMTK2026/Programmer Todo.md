@@ -1,13 +1,13 @@
-- [x] Player
+- [ ] Player
 	- [x] Movement
 		- [ ] Stretch goal: Hold down key to move continuously 
 	- [x] Exploding
 		- [x] Explosion vfx
 		- [x] Position resetting
-- [ ] Fire sprite
+- [x] Fire sprite
 	- [x] Pathfinding
-	- [ ] Player collision/explosion
-- [ ] Pickups
+	- [x] Player collision/explosion
+- [x] Pickups
 	- [x] Scissors (win condition)
 	- [x] Wick (improves defaultsteps by 8)
 - [ ] Obstacles

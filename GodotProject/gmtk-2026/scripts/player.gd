@@ -15,7 +15,8 @@ func _ready() -> void:
 @onready var ExplosionArea = $ExplosionArea
 
 func Explode():
-	CurrentlyMoving = true
+	if tween:
+		tween.stop()
 	var OverlappingDestructables = ExplosionArea.get_overlapping_areas()
 	for Destructable : Area2D in OverlappingDestructables:
 		Destructable.queue_free()
@@ -24,12 +25,13 @@ func Explode():
 	ExplosionInstance.global_position = position
 	position = InitialPosition
 	OnPlayerExploded.emit()
-	CurrentlyMoving = false
 
 @onready var Raycast = $RayCast2D
 @onready var DeathArea = $DeathArea
 
 var CurrentlyMoving = false
+
+var tween
 
 func Move(xydirection):
 	get_viewport().set_input_as_handled()
@@ -41,7 +43,7 @@ func Move(xydirection):
 		
 		if !Raycast.is_colliding():
 			CurrentlyMoving = true
-			var tween = create_tween()
+			tween = create_tween()
 			tween.tween_property(self, "position",
 				position + xydirection * Constants.TileSize, 1.0/4).set_trans(Tween.TRANS_SINE)
 			await tween.finished
