@@ -6,7 +6,7 @@
 		- [x] Position resetting
 	- [ ] Stretch goal: Fog of war (map revealed permanently as player explores, map starts out occluded by fog asset)
 - [ ] Fire sprite
-	- [ ] Pathfinding
+	- [x] Pathfinding
 	- [ ] Player collision/explosion
 - [ ] Pickups
 	- [x] Scissors (win condition)
