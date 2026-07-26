@@ -13,6 +13,8 @@ func _ready():
 	sprite_2d.play("default")
 	OriginalPosition = position
 
+var tween
+
 func onStepUpdate(playerPosition: Vector2):
 	navigation_agent_2d.set_target_position(playerPosition)
 	# Exits early if the player is not reachable
@@ -34,16 +36,12 @@ func onStepUpdate(playerPosition: Vector2):
 			sprite_2d.rotation_degrees = -90
 		Vector2(0,1):
 			sprite_2d.rotation_degrees = 90
-	var tween = create_tween()
+	tween = create_tween()
 	tween.tween_property(self, "position", position + direction * Constants.TileSize, 1.0/4).set_trans(Tween.TRANS_SINE)
 	await tween.finished
+	LevelManagerNode.PlayerNode.CheckForDeath()
 
 func OnPlayerExploded():
+	if tween:
+		tween.stop()
 	position = OriginalPosition
-
-#func _on_area_entered(area: Area2D) -> void:
-#	if area.owner == LevelManagerNode.PlayerNode:
-#		if tween:
-#			tween.stop()
-#		position = OriginalPosition
-#		LevelManagerNode.PlayerNode.Explode()
