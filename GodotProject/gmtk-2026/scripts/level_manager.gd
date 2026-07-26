@@ -53,6 +53,7 @@ func OnPlayerExploded():
 func GameOver():
 	print("level failed, restarting level. total steps taken" + str(TotalStepsTaken))
 	get_tree().reload_current_scene()
+	UpdateNavRegion()
 
 func UpdateNavRegion():
 	if get_tree():

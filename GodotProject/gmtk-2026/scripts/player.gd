@@ -29,6 +29,7 @@ func Explode():
 	get_tree().current_scene.add_child(ExplosionInstance)
 	ExplosionInstance.position = position
 	position = InitialPosition
+	CurrentlyMoving = false
 	OnPlayerExploded.emit()
 
 @onready var Raycast = $RayCast2D
