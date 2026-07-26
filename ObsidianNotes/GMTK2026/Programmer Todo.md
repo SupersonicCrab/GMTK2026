@@ -23,7 +23,7 @@
 		- [x] Options menu
 	- [x] Hud
 		- [ ] Stretch goal: Burning clock
-- [ ] Polish
-	- [ ] Audio
+- [x] Polish
+	- [x] Audio
 	- [x] Story Animatic
-	- [ ] Win screen
+	- [x] Win screen
