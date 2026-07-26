@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bs6d76lr81g8f" path="res://scenes/objects/boulder.tscn" id="5_fl5jg"]
 [ext_resource type="PackedScene" uid="uid://b0d3j8homko0n" path="res://scenes/fire_sprite.tscn" id="6_k88ha"]
 [ext_resource type="PackedScene" uid="uid://dyjmc65kvlmpf" path="res://scenes/objects/pickups/wick.tscn" id="9_x3x2x"]
+[ext_resource type="PackedScene" uid="uid://buqf60l6p7f7c" path="res://scenes/objects/pickups/scissors.tscn" id="10_a51xh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q1i7"]
 texture = ExtResource("2_nkmkj")
@@ -103,11 +104,13 @@ offset_top = 768.0
 offset_bottom = 768.0
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=672947269]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_g4v7s")
 
 [node name="Player" parent="." unique_id=851030699 instance=ExtResource("2_k88ha")]
-position = Vector2(64, 64)
+position = Vector2(64, 320)
 
 [node name="Wick" parent="." unique_id=1086519541 instance=ExtResource("9_x3x2x")]
 position = Vector2(-64, -64)
+
+[node name="Scissors" parent="." unique_id=1292586079 instance=ExtResource("10_a51xh")]
+position = Vector2(576, 320)

@@ -55,13 +55,11 @@ collision_mask = 0
 script = ExtResource("1_10v8t")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1206157918]
-position = Vector2(32, 32)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 frame_progress = 0.04605363
 speed_scale = 1.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2045258082]
-position = Vector2(32, 32)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1353484007]

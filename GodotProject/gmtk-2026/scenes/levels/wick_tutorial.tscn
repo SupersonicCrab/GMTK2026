@@ -1,0 +1,117 @@
+[gd_scene format=4 uid="uid://c5qvxkds1bdut"]
+
+[ext_resource type="PackedScene" uid="uid://cif5xhi77ln4u" path="res://scenes/level_manager.tscn" id="1_q24s5"]
+[ext_resource type="Texture2D" uid="uid://drrw1yddb6e32" path="res://assets/environment_tileset.png" id="2_i6jmf"]
+[ext_resource type="PackedScene" uid="uid://cjsj7aduji3mm" path="res://scenes/objects/destructible_wall.tscn" id="3_sn6vh"]
+[ext_resource type="PackedScene" uid="uid://buahl6hlgqfsx" path="res://scenes/objects/lava_source.tscn" id="4_rf0a6"]
+[ext_resource type="PackedScene" uid="uid://bs6d76lr81g8f" path="res://scenes/objects/boulder.tscn" id="5_mi88i"]
+[ext_resource type="PackedScene" uid="uid://b0d3j8homko0n" path="res://scenes/fire_sprite.tscn" id="6_g0s2l"]
+[ext_resource type="PackedScene" uid="uid://cwvabxpj8iylp" path="res://scenes/menus/step_timer.tscn" id="7_ey21c"]
+[ext_resource type="PackedScene" uid="uid://ck5lenyq7mwgt" path="res://scenes/player.tscn" id="8_s20j5"]
+[ext_resource type="PackedScene" uid="uid://dyjmc65kvlmpf" path="res://scenes/objects/pickups/wick.tscn" id="9_dctf3"]
+[ext_resource type="PackedScene" uid="uid://buqf60l6p7f7c" path="res://scenes/objects/pickups/scissors.tscn" id="10_tck5k"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q1i7"]
+texture = ExtResource("2_i6jmf")
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+6:1/0 = 0
+5:1/0 = 0
+4:1/0 = 0
+3:1/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+7:3/0 = 0
+6:3/0 = 0
+5:3/0 = 0
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:3/0 = 0
+2:3/0 = 0
+1:3/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+6:5/0 = 0
+5:5/0 = 0
+4:5/0 = 0
+3:5/0 = 0
+2:5/0 = 0
+1:5/0 = 0
+0:5/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:6/0 = 0
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_k88ha"]
+scenes/1/scene = ExtResource("3_sn6vh")
+scenes/2/scene = ExtResource("4_rf0a6")
+scenes/3/scene = ExtResource("5_mi88i")
+scenes/4/scene = ExtResource("6_g0s2l")
+
+[sub_resource type="TileSet" id="TileSet_57qmd"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4q1i7")
+sources/3 = SubResource("TileSetScenesCollectionSource_k88ha")
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_g4v7s"]
+vertices = PackedVector2Array(960, 128, 960, 192, 960, 256, 960, 320, 960, 384, 960, 448, 960, 512, 960, 576, 960, 640, 960, 704, 896, 704, 832, 704, 768, 704, 704, 704, 640, 704, 576, 704, 512, 704, 448, 704, 384, 704, 320, 704, 256, 704, 192, 704, 128, 704, 64, 704, 64, 640, 64, 576, 64, 512, 64, 448, 64, 384, 64, 320, 64, 256, 64, 192, 64, 128, 64, 64, 128, 64, 192, 64, 256, 64, 320, 64, 384, 64, 448, 64, 512, 64, 576, 64, 640, 64, 704, 64, 768, 64, 832, 64, 896, 64, 960, 64)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 0, 1024, 0, 1024, 768, 0, 768)])
+source_geometry_mode = 2
+agent_radius = 0.0
+
+[node name="LevelPrefab" type="Node2D" unique_id=1377552078]
+
+[node name="LevelManager" parent="." unique_id=776668038 node_paths=PackedStringArray("PlayerNode", "StepTimerNode", "NavigationRegion2DNode", "WickNode") instance=ExtResource("1_q24s5")]
+PlayerNode = NodePath("../Player")
+StepTimerNode = NodePath("../StepTimer")
+NavigationRegion2DNode = NodePath("../NavigationRegion2D")
+WickNode = NodePath("../Wick")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=788070684 groups=["navigation_polygon_source_geometry_group"]]
+tile_map_data = PackedByteArray("AAAAAAAAAAACAAYAAAABAAAAAAACAAYAAAACAAAAAAACAAYAAAADAAAAAAACAAYAAAAEAAAAAAACAAYAAAAFAAAAAAACAAYAAAAGAAAAAAACAAYAAAAHAAAAAAACAAYAAAAIAAAAAAACAAYAAAAJAAAAAAACAAYAAAAKAAAAAAACAAYAAAALAAAAAAACAAYAAAAMAAAAAAACAAYAAAANAAAAAAACAAYAAAAOAAAAAAACAAYAAAAPAAAAAAACAAYAAAAPAAEAAAACAAYAAAAPAAIAAAACAAYAAAAPAAMAAAACAAYAAAAPAAQAAAACAAYAAAAPAAUAAAACAAYAAAAPAAYAAAACAAYAAAAPAAcAAAACAAYAAAAPAAgAAAACAAYAAAAPAAkAAAACAAYAAAAPAAoAAAACAAYAAAAPAAsAAAACAAYAAAAAAAsAAAACAAYAAAAAAAoAAAACAAYAAAAAAAkAAAACAAYAAAAAAAgAAAACAAYAAAAAAAcAAAACAAYAAAAAAAYAAAACAAYAAAAAAAUAAAACAAYAAAAAAAQAAAACAAYAAAAAAAMAAAACAAYAAAAAAAIAAAACAAYAAAAAAAEAAAACAAYAAAAOAAsAAAACAAYAAAANAAsAAAACAAYAAAAMAAsAAAACAAYAAAALAAsAAAACAAYAAAAKAAsAAAACAAYAAAAJAAsAAAACAAYAAAAIAAsAAAACAAYAAAAHAAsAAAACAAYAAAAGAAsAAAACAAYAAAAFAAsAAAACAAYAAAAEAAsAAAACAAYAAAADAAsAAAACAAYAAAABAAsAAAACAAYAAAACAAsAAAACAAYAAAA=")
+tile_set = SubResource("TileSet_57qmd")
+
+[node name="StepTimer" parent="." unique_id=190756583 instance=ExtResource("7_ey21c")]
+offset_top = 768.0
+offset_bottom = 768.0
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=672947269]
+navigation_polygon = SubResource("NavigationPolygon_g4v7s")
+
+[node name="Player" parent="." unique_id=851030699 instance=ExtResource("8_s20j5")]
+position = Vector2(192, 320)
+
+[node name="Wick" parent="." unique_id=1086519541 instance=ExtResource("9_dctf3")]
+position = Vector2(384, 128)
+
+[node name="Scissors" parent="." unique_id=1292586079 instance=ExtResource("10_tck5k")]
+position = Vector2(896, 320)
+NextLevel = "res://scenes/levels/lava_tutorial.tscn"
