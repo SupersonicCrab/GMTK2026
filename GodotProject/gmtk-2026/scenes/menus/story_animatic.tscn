@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://brejcvq4ewlnp"]
+
+[ext_resource type="Script" uid="uid://ccud3h6iwe1va" path="res://scripts/story_animatic.gd" id="1_25hw2"]
+[ext_resource type="Texture2D" uid="uid://qutvbwd1m0bd" path="res://assets/storyanimatic.png" id="1_evl5o"]
+[ext_resource type="Texture2D" uid="uid://b1nub7586vn3" path="res://assets/UI/UISpritesheet2.png" id="2_o4aij"]
+[ext_resource type="FontFile" uid="uid://c28iyjhkvxpby" path="res://assets/UI/Kenney Pixel.ttf" id="3_25hw2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix6sx"]
+atlas = ExtResource("1_evl5o")
+region = Rect2(0, 0, 768, 576)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4aij"]
+atlas = ExtResource("1_evl5o")
+region = Rect2(769, 0, 768, 576)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25hw2"]
+atlas = ExtResource("1_evl5o")
+region = Rect2(1538, 0, 768, 576)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ha5v"]
+atlas = ExtResource("1_evl5o")
+region = Rect2(2307, 0, 768, 576)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avx35"]
+atlas = ExtResource("1_evl5o")
+region = Rect2(0, 1731, 768, 576)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix6sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4aij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25hw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ha5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avx35")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpxhy"]
+atlas = ExtResource("2_o4aij")
+region = Rect2(0, 0, 320, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yv26"]
+atlas = ExtResource("2_o4aij")
+region = Rect2(0, 256, 320, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7lef"]
+atlas = ExtResource("2_o4aij")
+region = Rect2(0, 128, 320, 128)
+
+[node name="StoryAnimatic" type="Control" unique_id=386854163]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_25hw2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=574832921]
+sprite_frames = SubResource("SpriteFrames_dgbkm")
+autoplay = "default"
+frame = 4
+frame_progress = 1.0
+
+[node name="Button" type="TextureButton" parent="." unique_id=1191990512]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 123.0
+offset_top = 113.0
+offset_right = 443.0
+offset_bottom = 241.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture_normal = SubResource("AtlasTexture_hpxhy")
+texture_pressed = SubResource("AtlasTexture_2yv26")
+texture_hover = SubResource("AtlasTexture_w7lef")
+
+[node name="Label" type="Label" parent="Button" unique_id=790054022]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.50980395, 0.50980395, 0.50980395, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_25hw2")
+theme_override_font_sizes/font_size = 64
+text = "Run!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

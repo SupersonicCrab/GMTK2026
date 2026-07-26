@@ -1,7 +1,7 @@
 extends Control
 
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/levels/scissors_tutorial.tscn")
+	get_tree().change_scene_to_file("res://scenes/menus/story_animatic.tscn")
 
 func _on_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menus/options_menu.tscn")

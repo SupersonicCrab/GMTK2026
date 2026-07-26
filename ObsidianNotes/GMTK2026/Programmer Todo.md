@@ -25,5 +25,5 @@
 		- [ ] Stretch goal: Burning clock
 - [ ] Polish
 	- [ ] Audio
-	- [ ] Animatic
+	- [x] Story Animatic
 	- [ ] Win screen

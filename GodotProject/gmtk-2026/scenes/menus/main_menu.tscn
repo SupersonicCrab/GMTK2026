@@ -49,13 +49,13 @@ size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
 theme_override_constants/separation = 64
 
-[node name="PlayButton2" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1932632781]
+[node name="PlayButton" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1932632781]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_84trb")
 texture_pressed = SubResource("AtlasTexture_8r73w")
 texture_hover = SubResource("AtlasTexture_ng0o5")
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PlayButton2" unique_id=395597015]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PlayButton" unique_id=395597015]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,13 +71,13 @@ text = "Play!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Options2" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1803692084]
+[node name="Options" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1803692084]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_84trb")
 texture_pressed = SubResource("AtlasTexture_8r73w")
 texture_hover = SubResource("AtlasTexture_ng0o5")
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Options2" unique_id=1301322028]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Options" unique_id=1301322028]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,13 +93,13 @@ text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Exit2" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1268020380]
+[node name="Exit" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1268020380]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_84trb")
 texture_pressed = SubResource("AtlasTexture_8r73w")
 texture_hover = SubResource("AtlasTexture_ng0o5")
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Exit2" unique_id=1937608392]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Exit" unique_id=1937608392]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -124,6 +124,6 @@ bus = &"Music"
 stream = ExtResource("5_imvie")
 bus = &"Ambience"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PlayButton2" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Options2" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit2" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_button_pressed"]
