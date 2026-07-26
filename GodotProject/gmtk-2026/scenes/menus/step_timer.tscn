@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dl1hush0omt4d" path="res://assets/timer_animated.png" id="1_kylj2"]
 [ext_resource type="Script" uid="uid://cce7hyxj12ekd" path="res://scripts/step_timer.gd" id="1_nkji1"]
 [ext_resource type="AudioStream" uid="uid://kba0nox3mcp7" path="res://assets/audio/FuseLoop.mp3" id="3_6rhk2"]
+[ext_resource type="Texture2D" uid="uid://d3xeq310dl40k" path="res://assets/fire_timer_animated.png" id="3_c6l3c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nkji1"]
 atlas = ExtResource("1_kylj2")
@@ -131,6 +132,70 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq4ge"]
+atlas = ExtResource("3_c6l3c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2qkf"]
+atlas = ExtResource("3_c6l3c")
+region = Rect2(33, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvwwh"]
+atlas = ExtResource("3_c6l3c")
+region = Rect2(66, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmvei"]
+atlas = ExtResource("3_c6l3c")
+region = Rect2(0, 33, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7toi"]
+atlas = ExtResource("3_c6l3c")
+region = Rect2(33, 33, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e38vx"]
+atlas = ExtResource("3_c6l3c")
+region = Rect2(66, 33, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34811"]
+atlas = ExtResource("3_c6l3c")
+region = Rect2(0, 66, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfhdy"]
+atlas = ExtResource("3_c6l3c")
+region = Rect2(33, 66, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rhk2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq4ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2qkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvwwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmvei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7toi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e38vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34811")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfhdy")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="StepTimer" type="Control" unique_id=190756583]
 z_index = 1
 layout_mode = 3
@@ -142,9 +207,15 @@ offset_bottom = -768.0
 grow_vertical = 0
 script = ExtResource("1_nkji1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1025930363]
+[node name="AnimatedSprite2DTimer" type="AnimatedSprite2D" parent="." unique_id=1025930363]
 position = Vector2(64, -64)
 sprite_frames = SubResource("SpriteFrames_dgbkm")
+
+[node name="AnimatedSprite2DFire" type="AnimatedSprite2D" parent="." unique_id=1961705915]
+position = Vector2(78, -116)
+sprite_frames = SubResource("SpriteFrames_6rhk2")
+autoplay = "default"
+frame_progress = 0.7146721
 
 [node name="LivesLabel" type="Label" parent="." unique_id=706907620]
 layout_mode = 1
