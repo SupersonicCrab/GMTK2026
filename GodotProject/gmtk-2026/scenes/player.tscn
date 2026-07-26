@@ -79,6 +79,7 @@ frame_progress = 0.2577835
 
 [node name="PlayerArea" type="Area2D" parent="." unique_id=378510868]
 position = Vector2(32, 32)
+collision_layer = 5
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="PlayerArea" unique_id=2122179550]
 shape = SubResource("RectangleShape2D_dgbkm")
