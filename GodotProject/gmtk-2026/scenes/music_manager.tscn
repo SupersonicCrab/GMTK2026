@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bat70ly5evtpl"]
+
+[ext_resource type="Script" uid="uid://kmvu6xygeaxv" path="res://scripts/music_manager.gd" id="1_jd6i5"]
+[ext_resource type="AudioStream" uid="uid://bpef7bjhdhp3y" path="res://assets/audio/Ambience.ogg" id="1_tn5dr"]
+
+[node name="MusicManager" type="Node2D" unique_id=951885309]
+script = ExtResource("1_jd6i5")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1739933438]
+bus = &"Music"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="." unique_id=1987630203]
+stream = ExtResource("1_tn5dr")
+autoplay = true
+bus = &"Ambience"

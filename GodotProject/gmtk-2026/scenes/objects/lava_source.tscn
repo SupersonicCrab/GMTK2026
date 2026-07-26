@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cqlkin1smnkme" path="res://scripts/lava_source.gd" id="1_k15m7"]
 [ext_resource type="Texture2D" uid="uid://drrw1yddb6e32" path="res://assets/environment_tileset.png" id="1_vxgp7"]
+[ext_resource type="AudioStream" uid="uid://dhuvxseqr322c" path="res://assets/audio/LavaLoopA.wav" id="3_va001"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k15m7"]
 atlas = ExtResource("1_vxgp7")
@@ -35,3 +36,8 @@ shape = SubResource("RectangleShape2D_dgbkm")
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=312088680]
 target_position = Vector2(0, 64)
 collide_with_areas = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1806507675]
+stream = ExtResource("3_va001")
+autoplay = true
+bus = &"Ambience"

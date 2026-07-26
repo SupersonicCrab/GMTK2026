@@ -22,6 +22,7 @@ buses/default_bus_layout="uid://ct33mw21k8ao4"
 [autoload]
 
 Constants="*uid://etof67gp6o11"
+MusicManager="*uid://bat70ly5evtpl"
 
 [display]
 

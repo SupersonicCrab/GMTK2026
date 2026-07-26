@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bl3xgxu8d4evp" path="res://scripts/fire_sprite.gd" id="1_10v8t"]
 [ext_resource type="Texture2D" uid="uid://1v8mwp30j3pj" path="res://assets/FlameSpriteOutline.png" id="1_71mpt"]
+[ext_resource type="AudioStream" uid="uid://d17jt3ukvbd6m" path="res://assets/audio/FireLoop.ogg" id="3_3lah8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10v8t"]
 atlas = ExtResource("1_71mpt")
@@ -64,5 +65,11 @@ speed_scale = 1.2
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1353484007]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=49087624]
+stream = ExtResource("3_3lah8")
+volume_db = -15.0
+autoplay = true
+bus = &"SFX"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

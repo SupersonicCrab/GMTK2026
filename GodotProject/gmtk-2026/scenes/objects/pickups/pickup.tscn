@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://e8ibx60gxorf"]
 
 [ext_resource type="Texture2D" uid="uid://csltkrjfuog7b" path="res://assets/debug/debug_item.png" id="1_ehort"]
+[ext_resource type="AudioStream" uid="uid://dm68vma1n2r60" path="res://assets/audio/ItemGet.wav" id="2_sr4mh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dgbkm"]
 animations = [{
@@ -27,3 +28,7 @@ sprite_frames = SubResource("SpriteFrames_dgbkm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2071647303]
 position = Vector2(32, 32)
 shape = SubResource("RectangleShape2D_dgbkm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1452590399]
+stream = ExtResource("2_sr4mh")
+bus = &"SFX"

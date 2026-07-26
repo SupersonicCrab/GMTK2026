@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://eqyx32a6qjbe" path="res://scripts/explosion.gd" id="2_2au8o"]
 [ext_resource type="Texture2D" uid="uid://kf1mfgwed8ow" path="res://assets/explosion.png" id="2_rckmw"]
+[ext_resource type="AudioStream" uid="uid://cpabsqkierx6n" path="res://assets/audio/BombExplosion.wav" id="3_2au8o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2au8o"]
 atlas = ExtResource("2_rckmw")
@@ -132,5 +133,11 @@ sprite_frames = SubResource("SpriteFrames_dgbkm")
 autoplay = "default"
 frame = 15
 frame_progress = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2145069869]
+stream = ExtResource("3_2au8o")
+volume_db = -10.0
+autoplay = true
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

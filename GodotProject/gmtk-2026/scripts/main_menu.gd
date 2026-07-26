@@ -8,3 +8,7 @@ func _on_options_pressed() -> void:
 
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
+
+func _ready() -> void:
+	var MusicManagerReference = MusicManager as MusicManagerNode
+	MusicManagerReference.SwitchMusic("res://assets/audio/Music/honey-bear-loop.mp3")

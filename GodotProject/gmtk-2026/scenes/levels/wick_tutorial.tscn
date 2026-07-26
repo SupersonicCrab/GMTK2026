@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ck5lenyq7mwgt" path="res://scenes/player.tscn" id="8_s20j5"]
 [ext_resource type="PackedScene" uid="uid://dyjmc65kvlmpf" path="res://scenes/objects/pickups/wick.tscn" id="9_dctf3"]
 [ext_resource type="PackedScene" uid="uid://buqf60l6p7f7c" path="res://scenes/objects/pickups/scissors.tscn" id="10_tck5k"]
+[ext_resource type="AudioStream" uid="uid://dr3d3svnaw3by" path="res://assets/audio/CompleteLevel.wav" id="11_i6jmf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q1i7"]
 texture = ExtResource("2_i6jmf")
@@ -115,3 +116,7 @@ position = Vector2(384, 128)
 [node name="Scissors" parent="." unique_id=1292586079 instance=ExtResource("10_tck5k")]
 position = Vector2(896, 320)
 NextLevel = "res://scenes/levels/lava_tutorial.tscn"
+
+[node name="CompleteLevelSFX" type="AudioStreamPlayer" parent="." unique_id=915888209]
+stream = ExtResource("11_i6jmf")
+autoplay = true

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cuamai82fgvwi" path="res://scripts/boulder.gd" id="1_bhlh1"]
 [ext_resource type="Texture2D" uid="uid://drrw1yddb6e32" path="res://assets/environment_tileset.png" id="1_gny4g"]
+[ext_resource type="AudioStream" uid="uid://8tcdh7kaatwr" path="res://assets/audio/RockSliding.mp3" id="3_ufnio"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bhlh1"]
 atlas = ExtResource("1_gny4g")
@@ -33,5 +34,10 @@ shape = SubResource("RectangleShape2D_dgbkm")
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1649011943]
 target_position = Vector2(0, 64)
 collide_with_areas = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1635669688]
+stream = ExtResource("3_ufnio")
+volume_db = -10.0
+bus = &"SFX"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

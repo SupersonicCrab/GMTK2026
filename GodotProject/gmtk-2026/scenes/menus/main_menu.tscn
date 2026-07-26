@@ -129,6 +129,7 @@ offset_left = -313.0
 offset_top = -142.0
 offset_right = 961.6666
 offset_bottom = 814.0
+mouse_filter = 2
 texture = ExtResource("8_50h1w")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

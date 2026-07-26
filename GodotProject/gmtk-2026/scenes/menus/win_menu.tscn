@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://c0181f6325sok"]
+
+[ext_resource type="Texture2D" uid="uid://b3kse3yyvkq6c" path="res://assets/Win.png" id="1_hadx3"]
+[ext_resource type="Script" uid="uid://drfj7e14acxgf" path="res://scripts/win_menu.gd" id="1_nlpyu"]
+[ext_resource type="Texture2D" uid="uid://b1nub7586vn3" path="res://assets/UI/UISpritesheet2.png" id="3_h5r23"]
+[ext_resource type="FontFile" uid="uid://c28iyjhkvxpby" path="res://assets/UI/Kenney Pixel.ttf" id="4_meh88"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npby5"]
+atlas = ExtResource("3_h5r23")
+region = Rect2(0, 0, 320, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iexr3"]
+atlas = ExtResource("3_h5r23")
+region = Rect2(0, 256, 320, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlbf1"]
+atlas = ExtResource("3_h5r23")
+region = Rect2(0, 128, 320, 128)
+
+[node name="WinMenu" type="Control" unique_id=284061548]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nlpyu")
+
+[node name="Win" type="Sprite2D" parent="." unique_id=419047083]
+texture = ExtResource("1_hadx3")
+
+[node name="MainMenu" type="TextureButton" parent="." unique_id=502341929]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 100.0
+offset_right = 160.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_npby5")
+texture_pressed = SubResource("AtlasTexture_iexr3")
+texture_hover = SubResource("AtlasTexture_vlbf1")
+
+[node name="Label" type="Label" parent="MainMenu" unique_id=1722010362]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.50980395, 0.50980395, 0.50980395, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_meh88")
+theme_override_font_sizes/font_size = 64
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

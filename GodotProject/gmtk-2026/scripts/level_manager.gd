@@ -21,6 +21,8 @@ func _ready() -> void:
 		PlayerNode.OnPlayerExploded.connect(OnPlayerExploded)
 	if WickNode:
 		WickNode.OnPlayerPickupWick.connect(OnPlayerPickupWick)
+	var MusicManagerReference = MusicManager as MusicManagerNode
+	MusicManagerReference.SwitchMusic("res://assets/audio/Music/happy_adveture.mp3")
 
 func OnPlayerPickupWick():
 	StepsRemaining += DefaultSteps

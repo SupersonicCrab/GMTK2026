@@ -8,6 +8,7 @@ func _ready() -> void:
 		PlayerNode.OnPlayerTryStep.connect(OnPlayerTryStep)
 
 @onready var Raycast = $RayCast2D
+@onready var SFX = $AudioStreamPlayer
 
 func OnPlayerTryStep():
 	if PlayerNode.Raycast.is_colliding():
@@ -16,6 +17,7 @@ func OnPlayerTryStep():
 			Raycast.force_raycast_update()
 			
 			if !Raycast.is_colliding():
+				SFX.play()
 				var tween = create_tween()
 				tween.tween_property(self, "position",
 					position + Raycast.target_position.normalized() * Constants.TileSize, 1.0/4).set_trans(Tween.TRANS_SINE)

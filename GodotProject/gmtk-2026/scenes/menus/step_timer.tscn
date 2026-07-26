@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dl1hush0omt4d" path="res://assets/timer_animated.png" id="1_kylj2"]
 [ext_resource type="Script" uid="uid://cce7hyxj12ekd" path="res://scripts/step_timer.gd" id="1_nkji1"]
+[ext_resource type="AudioStream" uid="uid://kba0nox3mcp7" path="res://assets/audio/FuseLoop.mp3" id="3_6rhk2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nkji1"]
 atlas = ExtResource("1_kylj2")
@@ -161,3 +162,8 @@ grow_vertical = 2
 text = "5"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=577844635]
+stream = ExtResource("3_6rhk2")
+autoplay = true
+bus = &"Ambience"
